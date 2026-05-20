@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EduConnect — Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+            colors: {
+              brand: {
+                50: '#EEF2FF',
+                100: '#E0E7FF',
+                200: '#C7D2FE',
+                500: '#5B6CFF',
+                600: '#3B5BFE',
+                700: '#2E48E0',
+              },
+              ink: {
+                900: '#0F172A',
+                700: '#334155',
+                600: '#475569',
+                500: '#64748B',
+                400: '#94A3B8',
+                300: '#CBD5E1',
+                200: '#E2E8F0',
+                100: '#F1F5F9',
+              },
+              page: '#F5F6F8',
+            },
+            boxShadow: {
+              card: '0 1px 2px rgba(15,23,42,0.04), 0 1px 1px rgba(15,23,42,0.03)',
+              soft: '0 4px 14px rgba(15,23,42,0.05)',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html,
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        background: #F5F6F8;
+        color: #0F172A;
+        -webkit-font-smoothing: antialiased;
+      }
+      .icon {
+        width: 20px;
+        height: 20px;
+        stroke: currentColor;
+        stroke-width: 1.75;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .icon-sm {
+        width: 16px;
+        height: 16px;
+        stroke: currentColor;
+        stroke-width: 1.75;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .icon-xs {
+        width: 14px;
+        height: 14px;
+        stroke: currentColor;
+        stroke-width: 1.75;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .ring-soft {
+        box-shadow: 0 0 0 1px #EEF0F3;
+      }
+      .scrollbar-none::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <div class="mx-auto max-w-[1440px] px-6 py-5">
+      <div class="flex items-start gap-6">
+        <!-- ============ LEFT SIDEBAR ============ -->
+        <aside class="w-[248px] flex-shrink-0 sticky top-5">
+          <!-- Logo -->
+          <div class="flex items-center gap-3 px-2 pb-5">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-brand-600 to-brand-700 shadow-soft">
+              <svg viewBox="0 0 24 24" class="h-5 w-5 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15.5H5.5A1.5 1.5 0 0 1 4 18V5.5Z" fill="white" stroke="none" />
+                <path d="M13 4h5.5A1.5 1.5 0 0 1 20 5.5V18a1.5 1.5 0 0 1-1.5 1.5H13V4Z" fill="white" fill-opacity="0.55" stroke="none" />
+              </svg>
+            </div>
+            <div class="leading-tight">
+              <div class="text-[18px] font-bold tracking-tight text-ink-900">EduConnect</div>
+              <div class="text-[11px] font-medium text-brand-600">Empowering Educators</div>
+            </div>
+          </div>
+
+          <!-- Primary nav -->
+          <nav class="space-y-1 px-1">
+            <!-- Home (active) -->
+            <a href="#" class="flex items-center gap-3 rounded-xl bg-brand-50 px-3 py-2.5 text-brand-700 ring-1 ring-brand-100">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M3.5 11.5 12 4l8.5 7.5"/><path d="M5.5 10v9.5a.5.5 0 0 0 .5.5h4v-6h4v6h4a.5.5 0 0 0 .5-.5V10"/></svg>
+              <span class="text-[14px] font-semibold">Home</span>
+            </a>
+            <!-- Network -->
+            <a href="network.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><path d="M6.7 7.3 10.5 10.8M17.3 7.3 13.6 10.8M6.7 16.7 10.5 13.2M17.3 16.7 13.6 13.2"/></svg>
+              <span class="text-[14px] font-medium">Network</span>
+            </a>
+            <!-- Communities -->
+            <a href="communities.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="8" r="2.25"/><path d="M2.5 19c.4-2.8 2.6-4.5 5.5-4.5s5.1 1.7 5.5 4.5"/><path d="M15 14c2.4 0 4.3 1.4 4.8 3.5"/></svg>
+              <span class="text-[14px] font-medium">Communities</span>
+            </a>
+            <!-- Messages -->
+            <a href="messages.html" class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <span class="flex items-center gap-3">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 14.5v-8Z"/></svg>
+                <span class="text-[14px] font-medium">Messages</span>
+              </span>
+              <span class="grid h-5 min-w-[20px] place-items-center rounded-full bg-brand-600 px-1.5 text-[11px] font-semibold text-white">2</span>
+            </a>
+            <!-- Resources -->
+            <a href="resources.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M3.5 7A1.5 1.5 0 0 1 5 5.5h4l2 2h8A1.5 1.5 0 0 1 20.5 9v8.5A1.5 1.5 0 0 1 19 19H5a1.5 1.5 0 0 1-1.5-1.5V7Z"/></svg>
+              <span class="text-[14px] font-medium">Resources</span>
+            </a>
+            <!-- Events -->
+            <a href="events.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><rect x="3.5" y="5.5" width="17" height="14" rx="2.5"/><path d="M3.5 10h17M8 3.5v4M16 3.5v4"/></svg>
+              <span class="text-[14px] font-medium">Events</span>
+            </a>
+            <!-- Jobs -->
+            <a href="jobs.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><rect x="3.5" y="7" width="17" height="12.5" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3.5 12.5h17"/></svg>
+              <span class="text-[14px] font-medium">Jobs</span>
+            </a>
+          </nav>
+
+          <!-- Divider -->
+          <div class="my-5 border-t border-ink-200/70"></div>
+
+          <!-- Shortcuts -->
+          <div class="px-3 pb-2 text-[11px] font-semibold uppercase tracking-wider text-ink-400">Shortcuts</div>
+          <nav class="space-y-1 px-1">
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M6.5 4.5h11v15l-5.5-3.5L6.5 19.5v-15Z"/></svg>
+              <span class="text-[14px] font-medium">Saved Posts</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M6 4.5h7.5L18.5 9v10a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5v-14a.5.5 0 0 1 .5-.5Z"/><path d="M13.5 4.5V9h5"/></svg>
+              <span class="text-[14px] font-medium">My Resources</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
+              <span class="text-[14px] font-medium">Teaching Templates</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+              <span class="text-[14px] font-medium">Recent Files</span>
+            </a>
+          </nav>
+
+          <!-- Bottom utility menu -->
+          <div class="mt-6 border-t border-ink-200/70 pt-3">
+            <nav class="space-y-1 px-1">
+              <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span class="text-[14px] font-medium">Settings</span>
+              </a>
+              <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="8.5"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 .9-1 1.7"/><circle cx="12" cy="16.5" r="0.6" fill="currentColor" stroke="none"/></svg>
+                <span class="text-[14px] font-medium">Help & Support</span>
+              </a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ============ CENTER + RIGHT WRAPPER ============ -->
+        <div class="flex min-w-0 flex-1 flex-col gap-5">
+          <!-- ===== TOP NAVBAR ===== -->
+          <header class="sticky top-5 z-20 -mb-5 flex items-center gap-5 bg-page pb-5">
+            <!-- Search -->
+            <div class="flex h-12 flex-1 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-4 shadow-card">
+              <svg viewBox="0 0 24 24" class="icon text-ink-400"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-3.5-3.5"/></svg>
+              <input
+                type="text"
+                placeholder="Search teachers, topics, resources…"
+                class="flex-1 bg-transparent text-[14px] text-ink-600 placeholder:text-ink-400 focus:outline-none"
+              />
+              <div class="flex h-7 items-center gap-1 rounded-md border border-ink-200 bg-ink-100/60 px-2 text-[11px] font-semibold text-ink-500">
+                <span>⌘</span><span>K</span>
+              </div>
+            </div>
+
+            <!-- Right cluster (unified frame) -->
+            <div class="flex h-12 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-3 shadow-card">
+              <!-- Chat -->
+              <button class="relative grid h-9 w-9 place-items-center rounded-full text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 14.5v-8Z"/></svg>
+                <span class="absolute -right-0.5 -top-0.5 grid h-5 min-w-[20px] place-items-center rounded-full bg-brand-600 px-1 text-[10px] font-bold text-white ring-2 ring-white">2</span>
+              </button>
+              <!-- Bell -->
+              <button class="relative grid h-9 w-9 place-items-center rounded-full text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15L6 16Z"/><path d="M10 19.5a2 2 0 0 0 4 0"/></svg>
+                <span class="absolute right-1 top-1 h-2.5 w-2.5 rounded-full bg-brand-600 ring-2 ring-white"></span>
+              </button>
+              <!-- Avatar + dropdown -->
+              <a href="profile.html" class="flex items-center gap-2 rounded-full hover:bg-ink-100 pl-0.5 pr-2 py-0.5">
+                <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-9 w-9 rounded-full object-cover" alt="" />
+                <svg viewBox="0 0 24 24" class="icon-sm text-ink-500"><path d="m6 9 6 6 6-6"/></svg>
+              </a>
+            </div>
+          </header>
+
+          <!-- ===== MAIN 2-COL ===== -->
+          <div class="grid grid-cols-[1fr_340px] gap-6">
+            <!-- =========== CENTER FEED =========== -->
+            <main class="space-y-5 min-w-0">
+              <!-- Create post -->
+              <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <div class="flex items-center gap-4">
+                  <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-12 w-12 rounded-full object-cover" alt="" />
+                  <button class="flex-1 truncate rounded-full bg-ink-100/70 px-5 py-3 text-left text-[14px] text-ink-500 hover:bg-ink-100">
+                    What's on your mind, Sadrush?
+                  </button>
+                  <button class="rounded-full border border-brand-200 bg-white px-5 py-2.5 text-[13px] font-semibold text-brand-600 hover:bg-brand-50">
+                    Share post
+                  </button>
+                </div>
+                <div class="mt-4 flex items-center justify-between gap-2 border-t border-ink-100 pt-4">
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon text-brand-600"><rect x="5.5" y="3.5" width="13" height="17" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+                    Lesson Plan
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon text-emerald-500"><rect x="3.5" y="5" width="17" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="m4 18 5-5 4 4 3-3 4 4"/></svg>
+                    Image
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon text-amber-500"><path d="M5 19V11M10 19V7M15 19v-5M20 19V4"/></svg>
+                    Poll
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon text-rose-500"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg>
+                    Resource Link
+                  </button>
+                </div>
+              </section>
+
+              <!-- Tabs -->
+              <section class="flex items-center justify-between border-b border-ink-200/70">
+                <div class="flex items-center gap-6 px-2">
+                  <button class="relative px-1 py-3 text-[14px] font-semibold text-brand-600">
+                    For you
+                    <span class="absolute inset-x-0 -bottom-[1px] h-[3px] rounded-t bg-brand-600"></span>
+                  </button>
+                  <button class="px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">Following</button>
+                  <button class="px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">Communities</button>
+                  <button class="px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">Saved</button>
+                </div>
+                <button class="flex items-center gap-1 px-2 py-3 text-[13px] font-medium text-ink-600 hover:text-ink-900">
+                  Most relevant
+                  <svg viewBox="0 0 24 24" class="icon-sm"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+              </section>
+
+              <!-- Post 1 -->
+              <article class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <!-- Header -->
+                <header class="flex items-start gap-3">
+                  <a href="view-profile.html"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&crop=faces" class="h-11 w-11 rounded-full object-cover transition hover:opacity-90" alt="" /></a>
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-1.5">
+                      <a href="view-profile.html" class="text-[14.5px] font-semibold text-ink-900 hover:underline">Maya Reyes</a>
+                      <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-600" fill="currentColor"><path d="M12 2 14 4l2.8-.6 1.1 2.6 2.6 1.1L20 9.8 22 12l-2 2.2.5 2.7-2.6 1.1-1.1 2.6L14 20l-2 2-2-2-2.7.6-1.1-2.6-2.6-1.1L4 14.2 2 12l2-2.2L3.5 7.1l2.6-1.1L7.2 3.4 10 4l2-2Z"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                      <span class="ml-1 rounded-md bg-violet-100 px-2 py-0.5 text-[11px] font-semibold text-violet-700">Teacher</span>
+                    </div>
+                    <div class="mt-0.5 text-[12.5px] text-ink-500">Physics Teacher • Greenfield Academy, Bangalore</div>
+                    <div class="mt-0.5 flex items-center gap-1.5 text-[12px] text-ink-400">
+                      <span>2h ago</span>
+                      <span>•</span>
+                      <svg viewBox="0 0 24 24" class="icon-xs"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 3 2.5 14 0 17M12 3.5c-2.5 3-2.5 14 0 17"/></svg>
+                    </div>
+                  </div>
+                  <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                  </button>
+                </header>
+
+                <!-- Body -->
+                <div class="mt-4 text-[14.5px] leading-relaxed text-ink-900">
+                  Just wrapped up an engaging lesson on Rotational Motion with Grade 11.<br />
+                  Here's the complete unit plan, worksheets, and assessment rubric I used. <span>✨</span>
+                </div>
+
+                <!-- Image -->
+                <div class="mt-4 overflow-hidden rounded-2xl ring-1 ring-ink-200/60">
+                  <img
+                    src="https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?w=1400&h=720&fit=crop"
+                    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1465101046530-73398c7f28ca?w=1400&h=720&fit=crop'"
+                    class="block aspect-[16/8.2] w-full object-cover"
+                    alt="Rotational motion visualization"
+                  />
+                </div>
+
+                <!-- Actions -->
+                <footer class="mt-4 flex items-center justify-between gap-2 border-t border-ink-100 pt-3">
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M7 10.5V20H4.5A.5.5 0 0 1 4 19.5v-9A.5.5 0 0 1 4.5 10H7Zm0 0 4-6.5a2 2 0 0 1 2 2v3h5.5a1.5 1.5 0 0 1 1.5 1.7l-1 7.3a2 2 0 0 1-2 1.5H7"/></svg>
+                    263
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 14.5v-8Z"/></svg>
+                    48
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="m17 4 3 3-3 3"/><path d="M7 7h13"/><path d="m7 20-3-3 3-3"/><path d="M17 17H4"/></svg>
+                    32
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M6.5 4.5h11v15l-5.5-3.5L6.5 19.5v-15Z"/></svg>
+                    Save
+                  </button>
+                </footer>
+              </article>
+
+              <!-- Post 2 (partial preview) -->
+              <article class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <header class="flex items-start gap-3">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=faces" class="h-11 w-11 rounded-full object-cover" alt="" />
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-1.5">
+                      <span class="text-[14.5px] font-semibold text-ink-900">Daniel Okafor</span>
+                      <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-600" fill="currentColor"><path d="M12 2 14 4l2.8-.6 1.1 2.6 2.6 1.1L20 9.8 22 12l-2 2.2.5 2.7-2.6 1.1-1.1 2.6L14 20l-2 2-2-2-2.7.6-1.1-2.6-2.6-1.1L4 14.2 2 12l2-2.2L3.5 7.1l2.6-1.1L7.2 3.4 10 4l2-2Z"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                      <span class="ml-1 rounded-md bg-emerald-100 px-2 py-0.5 text-[11px] font-semibold text-emerald-700">Math Teacher</span>
+                    </div>
+                    <div class="mt-0.5 text-[12.5px] text-ink-500">Mathematics • Senior Faculty • St. Xavier's School</div>
+                    <div class="mt-0.5 flex items-center gap-1.5 text-[12px] text-ink-400">
+                      <span>6h ago</span>
+                      <span>•</span>
+                      <svg viewBox="0 0 24 24" class="icon-xs"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 3 2.5 14 0 17M12 3.5c-2.5 3-2.5 14 0 17"/></svg>
+                    </div>
+                  </div>
+                  <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                  </button>
+                </header>
+              </article>
+            </main>
+
+            <!-- =========== RIGHT SIDEBAR =========== -->
+            <aside class="space-y-5 self-start sticky top-[88px]">
+              <!-- Upcoming Events -->
+              <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <header class="mb-4 flex items-center justify-between">
+                  <h3 class="text-[14.5px] font-semibold text-ink-900">Upcoming Events</h3>
+                  <a href="#" class="inline-flex items-center gap-1 text-[12.5px] font-semibold text-brand-600 hover:text-brand-700">View all
+                    <svg viewBox="0 0 24 24" class="icon-xs"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  </a>
+                </header>
+                <ul class="space-y-4">
+                  <li class="flex items-start gap-3">
+                    <div class="flex h-14 w-14 flex-shrink-0 flex-col items-center justify-center rounded-xl border border-ink-200/70 bg-ink-100/40">
+                      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">May</div>
+                      <div class="text-[18px] font-bold leading-none text-ink-900">22</div>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-[13.5px] font-semibold text-ink-900">Annual Educators' Symposium</div>
+                      <div class="mt-0.5 text-[12px] text-ink-500">Hyderabad • 1,240 attending</div>
+                      <div class="mt-1.5 flex items-center">
+                        <div class="flex -space-x-2">
+                          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                        </div>
+                        <span class="ml-2 text-[11.5px] font-semibold text-ink-500">+124</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="flex h-14 w-14 flex-shrink-0 flex-col items-center justify-center rounded-xl border border-ink-200/70 bg-ink-100/40">
+                      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">May</div>
+                      <div class="text-[18px] font-bold leading-none text-ink-900">28</div>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-[13.5px] font-semibold text-ink-900">Practical Assessment Workshop</div>
+                      <div class="mt-0.5 text-[12px] text-ink-500">Online • 320 attending</div>
+                      <div class="mt-1.5 flex items-center">
+                        <div class="flex -space-x-2">
+                          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1545996124-0501ebae84d0?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                        </div>
+                        <span class="ml-2 text-[11.5px] font-semibold text-ink-500">+38</span>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="flex h-14 w-14 flex-shrink-0 flex-col items-center justify-center rounded-xl border border-ink-200/70 bg-ink-100/40">
+                      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Jun</div>
+                      <div class="text-[18px] font-bold leading-none text-ink-900">04</div>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-[13.5px] font-semibold text-ink-900">STEM Curriculum Roundtable</div>
+                      <div class="mt-0.5 text-[12px] text-ink-500">Bengaluru • 84 attending</div>
+                      <div class="mt-1.5 flex items-center">
+                        <div class="flex -space-x-2">
+                          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1546961342-c0ee2627ee59?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                        </div>
+                        <span class="ml-2 text-[11.5px] font-semibold text-ink-500">+12</span>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- Communities to join -->
+              <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <header class="mb-4 flex items-center justify-between">
+                  <h3 class="text-[14.5px] font-semibold text-ink-900">Communities to join</h3>
+                  <a href="#" class="inline-flex items-center gap-1 text-[12.5px] font-semibold text-brand-600 hover:text-brand-700">View all
+                    <svg viewBox="0 0 24 24" class="icon-xs"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  </a>
+                </header>
+                <ul class="space-y-3">
+                  <li class="flex items-center gap-3">
+                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 text-white">
+                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(-60 12 12)"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-[13.5px] font-semibold text-ink-900">Physics Teachers India</div>
+                      <div class="text-[11.5px] text-ink-500">12.3K members • Active today</div>
+                    </div>
+                    <button class="rounded-full border border-ink-200 bg-white px-3.5 py-1.5 text-[12px] font-semibold text-brand-600 hover:bg-brand-50">Join</button>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 text-white">
+                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15.5H5.5A1.5 1.5 0 0 1 4 18V5.5Z"/><path d="M13 4h5.5A1.5 1.5 0 0 1 20 5.5V18a1.5 1.5 0 0 1-1.5 1.5H13V4Z"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-[13.5px] font-semibold text-ink-900">NEP 2020 Implementation</div>
+                      <div class="text-[11.5px] text-ink-500">8.9K members • Active today</div>
+                    </div>
+                    <button class="rounded-full border border-ink-200 bg-white px-3.5 py-1.5 text-[12px] font-semibold text-brand-600 hover:bg-brand-50">Join</button>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-orange-500 to-rose-500 text-white">
+                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 3.5h6M10 3.5v5.5L5 18a2 2 0 0 0 1.8 2.5h10.4A2 2 0 0 0 19 18l-5-9V3.5"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-[13.5px] font-semibold text-ink-900">STEM Curriculum Design</div>
+                      <div class="text-[11.5px] text-ink-500">5.1K members • Active today</div>
+                    </div>
+                    <button class="rounded-full border border-ink-200 bg-white px-3.5 py-1.5 text-[12px] font-semibold text-brand-600 hover:bg-brand-50">Join</button>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- Jobs matching you -->
+              <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <header class="mb-4 flex items-center justify-between">
+                  <h3 class="text-[14.5px] font-semibold text-ink-900">Jobs matching you</h3>
+                  <a href="#" class="inline-flex items-center gap-1 text-[12.5px] font-semibold text-brand-600 hover:text-brand-700">View all
+                    <svg viewBox="0 0 24 24" class="icon-xs"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  </a>
+                </header>
+                <ul class="space-y-4">
+                  <li class="flex items-start gap-3">
+                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-rose-500 to-red-600 text-white">
+                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-7h6v7"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-[13.5px] font-semibold text-ink-900">Physics Teacher (Senior Grade)</div>
+                      <div class="text-[11.5px] text-ink-500">Greenfield Academy • Bengaluru</div>
+                    </div>
+                    <span class="rounded-md bg-emerald-100 px-2 py-0.5 text-[11px] font-semibold text-emerald-700">Full-time</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 text-white">
+                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12,3 21,8 12,13 3,8"/><polyline points="3,13 12,18 21,13"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-[13.5px] font-semibold text-ink-900">Curriculum Coordinator — Science</div>
+                      <div class="text-[11.5px] text-ink-500">Scholars International School • Hyderabad</div>
+                    </div>
+                    <span class="rounded-md bg-sky-100 px-2 py-0.5 text-[11px] font-semibold text-sky-700">Full-time</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 text-white">
+                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 3v3M12 18v3M5 5l2 2M17 17l2 2M3 12h3M18 12h3M5 19l2-2M17 7l2-2"/><circle cx="12" cy="12" r="4"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-[13.5px] font-semibold text-ink-900">STEM Program Lead</div>
+                      <div class="text-[11.5px] text-ink-500">Bright Horizons School • Pune</div>
+                    </div>
+                    <span class="rounded-md bg-violet-100 px-2 py-0.5 text-[11px] font-semibold text-violet-700">Contract</span>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
