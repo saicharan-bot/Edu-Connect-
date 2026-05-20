@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($pages = 'index.html','network.html','communities.html','messages.html','resources.html','events.html','jobs.html'; foreach \\($p in $pages\\) { try { $r = Invoke-WebRequest -Uri \"http://localhost:8000/$p\" -UseBasicParsing -TimeoutSec 5; \"{0,-22} {1} \\({2:N0} bytes\\)\" -f $p, $r.StatusCode, $r.Content.Length } catch { \"{0,-22} ERR: {1}\" -f $p, $_.Exception.Message } })"
+    ]
+  }
+}
