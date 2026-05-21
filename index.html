@@ -191,37 +191,30 @@
         <!-- ============ CENTER + RIGHT WRAPPER ============ -->
         <div class="flex min-w-0 flex-1 flex-col gap-5">
           <!-- ===== TOP NAVBAR ===== -->
-          <header class="sticky top-5 z-20 -mb-5 flex items-center gap-5 bg-page pb-5">
-            <!-- Search -->
-            <div class="flex h-12 flex-1 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-4 shadow-card">
-              <svg viewBox="0 0 24 24" class="icon text-ink-400"><path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
-              <input
-                type="text"
-                placeholder="Search teachers, topics, resources…"
-                class="flex-1 bg-transparent text-[14px] text-ink-600 placeholder:text-ink-400 focus:outline-none"
-              />
-              <div class="flex h-7 items-center gap-1 rounded-md border border-ink-200 bg-ink-100/60 px-2 text-[11px] font-semibold text-ink-500">
-                <span>⌘</span><span>K</span>
+          <header class="sticky top-5 z-20 -mb-5 bg-page pb-5">
+            <div class="flex items-center gap-3 rounded-2xl border border-ink-200/70 bg-white/85 px-3 py-2.5 shadow-[0_10px_30px_-14px_rgba(15,23,42,0.25)] backdrop-blur-xl">
+              <!-- Search -->
+              <label class="group flex h-12 flex-1 items-center gap-2.5 rounded-full border border-ink-200/70 bg-[#F8FAFC] px-4 transition-all duration-200 focus-within:border-brand-300 focus-within:bg-white focus-within:shadow-[0_0_0_4px_rgba(91,108,255,0.12)]">
+                <svg viewBox="0 0 24 24" class="icon text-ink-400 transition-colors group-focus-within:text-brand-500"><path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+                <input type="text" placeholder="Search teachers, topics, resources…" class="flex-1 bg-transparent text-[14px] text-ink-700 placeholder:text-ink-400 focus:outline-none"/>
+                <span class="hidden h-[26px] select-none items-center rounded-lg border border-ink-200 bg-white px-2 text-[11px] font-semibold text-ink-400 sm:flex">⌘K</span>
+              </label>
+              <!-- Right actions -->
+              <div class="flex h-12 items-center gap-0.5 rounded-full border border-ink-200/70 bg-[#F8FAFC] px-1.5">
+                <a href="messages.html" class="relative grid h-9 w-9 place-items-center rounded-full text-ink-500 transition-all duration-200 hover:bg-white hover:text-ink-900 hover:shadow-sm active:scale-90">
+                  <svg viewBox="0 0 24 24" class="icon"><path d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+                  <span class="absolute -right-0.5 -top-0.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-brand-600 px-1 text-[10px] font-bold text-white ring-2 ring-white">2</span>
+                </a>
+                <a href="notifications.html" class="relative grid h-9 w-9 place-items-center rounded-full text-ink-500 transition-all duration-200 hover:bg-white hover:text-ink-900 hover:shadow-sm active:scale-90">
+                  <svg viewBox="0 0 24 24" class="icon"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"/></svg>
+                  <span class="absolute right-1.5 top-1.5 h-2.5 w-2.5 rounded-full bg-brand-600 ring-2 ring-white"></span>
+                </a>
+                <span class="mx-1 h-6 w-px bg-ink-200"></span>
+                <a href="profile.html" class="group flex items-center gap-1 rounded-full py-0.5 pl-0.5 pr-1.5 transition-all duration-200 hover:bg-white hover:shadow-sm active:scale-95">
+                  <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-9 w-9 rounded-full object-cover" alt=""/>
+                  <svg viewBox="0 0 24 24" class="icon-sm text-ink-400 transition-transform duration-200 group-hover:translate-y-0.5"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+                </a>
               </div>
-            </div>
-
-            <!-- Right cluster (unified frame) -->
-            <div class="flex h-12 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-3 shadow-card">
-              <!-- Chat -->
-              <button class="relative grid h-9 w-9 place-items-center rounded-full text-ink-600 hover:bg-ink-100">
-                <svg viewBox="0 0 24 24" class="icon"><path d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
-                <span class="absolute -right-0.5 -top-0.5 grid h-5 min-w-[20px] place-items-center rounded-full bg-brand-600 px-1 text-[10px] font-bold text-white ring-2 ring-white">2</span>
-              </button>
-              <!-- Bell -->
-              <button class="relative grid h-9 w-9 place-items-center rounded-full text-ink-600 hover:bg-ink-100">
-                <svg viewBox="0 0 24 24" class="icon"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"/></svg>
-                <span class="absolute right-1 top-1 h-2.5 w-2.5 rounded-full bg-brand-600 ring-2 ring-white"></span>
-              </button>
-              <!-- Avatar + dropdown -->
-              <a href="profile.html" class="flex items-center gap-2 rounded-full hover:bg-ink-100 pl-0.5 pr-2 py-0.5">
-                <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-9 w-9 rounded-full object-cover" alt="" />
-                <svg viewBox="0 0 24 24" class="icon-sm text-ink-500"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
-              </a>
             </div>
           </header>
 
@@ -231,30 +224,31 @@
             <main class="space-y-5 min-w-0">
               <!-- Create post -->
               <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
-                <div class="flex items-center gap-4">
-                  <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-12 w-12 rounded-full object-cover" alt="" />
-                  <button class="flex-1 truncate rounded-full bg-ink-100/70 px-5 py-3 text-left text-[14px] text-ink-500 hover:bg-ink-100">
+                <div class="flex items-center gap-3">
+                  <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-12 w-12 flex-shrink-0 rounded-full object-cover" alt="" />
+                  <button class="flex-1 truncate rounded-xl border border-ink-200/70 bg-ink-100/70 px-4 py-3 text-left text-[14px] text-ink-500 transition-colors hover:bg-ink-100">
                     What's on your mind, Sadrush?
                   </button>
-                  <button class="rounded-full border border-brand-200 bg-white px-5 py-2.5 text-[13px] font-semibold text-brand-600 hover:bg-brand-50">
+                  <button class="inline-flex flex-shrink-0 items-center justify-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brand-700">
+                    <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"/></svg>
                     Share post
                   </button>
                 </div>
-                <div class="mt-4 flex items-center justify-between gap-2 border-t border-ink-100 pt-4">
-                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
-                    <svg viewBox="0 0 24 24" class="icon text-brand-600"><rect x="5.5" y="3.5" width="13" height="17" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
+                <div class="mt-4 flex items-center gap-2 border-t border-ink-100 pt-4">
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-ink-200/70 bg-white px-3 py-2 text-[12.5px] font-medium text-ink-600 transition-colors hover:bg-ink-50">
+                    <svg viewBox="0 0 24 24" class="icon-sm text-brand-600"><path d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg>
                     Lesson Plan
                   </button>
-                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
-                    <svg viewBox="0 0 24 24" class="icon text-emerald-500"><rect x="3.5" y="5" width="17" height="14" rx="2"/><circle cx="9" cy="10" r="1.5"/><path d="m4 18 5-5 4 4 3-3 4 4"/></svg>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-ink-200/70 bg-white px-3 py-2 text-[12.5px] font-medium text-ink-600 transition-colors hover:bg-ink-50">
+                    <svg viewBox="0 0 24 24" class="icon-sm text-emerald-500"><path d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 0 0 1.5-1.5V6a1.5 1.5 0 0 0-1.5-1.5H3.75A1.5 1.5 0 0 0 2.25 6v12a1.5 1.5 0 0 0 1.5 1.5Zm10.5-11.25h.008v.008h-.008V8.25Zm.375 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"/></svg>
                     Image
                   </button>
-                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
-                    <svg viewBox="0 0 24 24" class="icon text-amber-500"><path d="M5 19V11M10 19V7M15 19v-5M20 19V4"/></svg>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-ink-200/70 bg-white px-3 py-2 text-[12.5px] font-medium text-ink-600 transition-colors hover:bg-ink-50">
+                    <svg viewBox="0 0 24 24" class="icon-sm text-amber-500"><path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"/></svg>
                     Poll
                   </button>
-                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
-                    <svg viewBox="0 0 24 24" class="icon text-rose-500"><path d="M10 14a4 4 0 0 0 5.66 0l3-3a4 4 0 0 0-5.66-5.66l-1 1"/><path d="M14 10a4 4 0 0 0-5.66 0l-3 3a4 4 0 0 0 5.66 5.66l1-1"/></svg>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg border border-ink-200/70 bg-white px-3 py-2 text-[12.5px] font-medium text-ink-600 transition-colors hover:bg-ink-50">
+                    <svg viewBox="0 0 24 24" class="icon-sm text-rose-500"><path d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"/></svg>
                     Resource Link
                   </button>
                 </div>
@@ -337,6 +331,226 @@
                 </footer>
               </article>
 
+              <!-- Post: Physics experiment -->
+              <article class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <header class="flex items-start gap-3">
+                  <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=120&h=120&fit=crop&crop=faces" class="h-11 w-11 rounded-full object-cover" alt="" />
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-1.5">
+                      <span class="text-[14.5px] font-semibold text-ink-900">Arjun Verma</span>
+                      <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-600" fill="currentColor"><path d="M12 2 14 4l2.8-.6 1.1 2.6 2.6 1.1L20 9.8 22 12l-2 2.2.5 2.7-2.6 1.1-1.1 2.6L14 20l-2 2-2-2-2.7.6-1.1-2.6-2.6-1.1L4 14.2 2 12l2-2.2L3.5 7.1l2.6-1.1L7.2 3.4 10 4l2-2Z"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                      <span class="ml-1 rounded-md bg-violet-100 px-2 py-0.5 text-[11px] font-semibold text-violet-700">Physics Teacher</span>
+                    </div>
+                    <div class="mt-0.5 text-[12.5px] text-ink-500">Physics Teacher • Greenfield Academy, Bengaluru</div>
+                    <div class="mt-0.5 flex items-center gap-1.5 text-[12px] text-ink-400">
+                      <span>5h ago</span>
+                      <span>•</span>
+                      <svg viewBox="0 0 24 24" class="icon-xs"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 3 2.5 14 0 17M12 3.5c-2.5 3-2.5 14 0 17"/></svg>
+                    </div>
+                  </div>
+                  <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                  </button>
+                </header>
+
+                <div class="mt-4 text-[14.5px] leading-relaxed text-ink-900">
+                  Today's practical session on simple pendulums had Grade 10 completely hooked — measuring time periods and chasing that perfect swing. Nothing beats learning physics by doing it. <span>⚙️</span>
+                </div>
+
+                <div class="mt-4 overflow-hidden rounded-2xl ring-1 ring-ink-200/60">
+                  <img
+                    src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1400&h=720&fit=crop"
+                    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1400&h=720&fit=crop'"
+                    class="block aspect-[16/8.2] w-full object-cover"
+                    alt="Physics experiment session"
+                  />
+                </div>
+
+                <footer class="mt-4 flex items-center justify-between gap-2 border-t border-ink-100 pt-3">
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M7 10.5V20H4.5A.5.5 0 0 1 4 19.5v-9A.5.5 0 0 1 4.5 10H7Zm0 0 4-6.5a2 2 0 0 1 2 2v3h5.5a1.5 1.5 0 0 1 1.5 1.7l-1 7.3a2 2 0 0 1-2 1.5H7"/></svg>
+                    312
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+                    57
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="m17 4 3 3-3 3"/><path d="M7 7h13"/><path d="m7 20-3-3 3-3"/><path d="M17 17H4"/></svg>
+                    41
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M6.5 4.5h11v15l-5.5-3.5L6.5 19.5v-15Z"/></svg>
+                    Save
+                  </button>
+                </footer>
+              </article>
+
+              <!-- Post: Mathematics activity -->
+              <article class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <header class="flex items-start gap-3">
+                  <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=120&h=120&fit=crop&crop=faces" class="h-11 w-11 rounded-full object-cover" alt="" />
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-1.5">
+                      <span class="text-[14.5px] font-semibold text-ink-900">Ananya Sharma</span>
+                      <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-600" fill="currentColor"><path d="M12 2 14 4l2.8-.6 1.1 2.6 2.6 1.1L20 9.8 22 12l-2 2.2.5 2.7-2.6 1.1-1.1 2.6L14 20l-2 2-2-2-2.7.6-1.1-2.6-2.6-1.1L4 14.2 2 12l2-2.2L3.5 7.1l2.6-1.1L7.2 3.4 10 4l2-2Z"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                      <span class="ml-1 rounded-md bg-emerald-100 px-2 py-0.5 text-[11px] font-semibold text-emerald-700">Math Teacher</span>
+                    </div>
+                    <div class="mt-0.5 text-[12.5px] text-ink-500">Mathematics • St. Xavier's School, Mumbai</div>
+                    <div class="mt-0.5 flex items-center gap-1.5 text-[12px] text-ink-400">
+                      <span>8h ago</span>
+                      <span>•</span>
+                      <svg viewBox="0 0 24 24" class="icon-xs"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 3 2.5 14 0 17M12 3.5c-2.5 3-2.5 14 0 17"/></svg>
+                    </div>
+                  </div>
+                  <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                  </button>
+                </header>
+
+                <div class="mt-4 text-[14.5px] leading-relaxed text-ink-900">
+                  Turned algebra into a team puzzle race today. Every group worked the whiteboard to crack the equations first — problem-solving has never been this loud and joyful! <span>🧩</span>
+                </div>
+
+                <div class="mt-4 overflow-hidden rounded-2xl ring-1 ring-ink-200/60">
+                  <img
+                    src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=1400&h=720&fit=crop"
+                    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&h=720&fit=crop'"
+                    class="block aspect-[16/8.2] w-full object-cover"
+                    alt="Mathematics problem-solving activity"
+                  />
+                </div>
+
+                <footer class="mt-4 flex items-center justify-between gap-2 border-t border-ink-100 pt-3">
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M7 10.5V20H4.5A.5.5 0 0 1 4 19.5v-9A.5.5 0 0 1 4.5 10H7Zm0 0 4-6.5a2 2 0 0 1 2 2v3h5.5a1.5 1.5 0 0 1 1.5 1.7l-1 7.3a2 2 0 0 1-2 1.5H7"/></svg>
+                    198
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+                    33
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="m17 4 3 3-3 3"/><path d="M7 7h13"/><path d="m7 20-3-3 3-3"/><path d="M17 17H4"/></svg>
+                    19
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M6.5 4.5h11v15l-5.5-3.5L6.5 19.5v-15Z"/></svg>
+                    Save
+                  </button>
+                </footer>
+              </article>
+
+              <!-- Post: Biology lab -->
+              <article class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <header class="flex items-start gap-3">
+                  <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=120&h=120&fit=crop&crop=faces" class="h-11 w-11 rounded-full object-cover" alt="" />
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-1.5">
+                      <span class="text-[14.5px] font-semibold text-ink-900">Amit Patel</span>
+                      <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-600" fill="currentColor"><path d="M12 2 14 4l2.8-.6 1.1 2.6 2.6 1.1L20 9.8 22 12l-2 2.2.5 2.7-2.6 1.1-1.1 2.6L14 20l-2 2-2-2-2.7.6-1.1-2.6-2.6-1.1L4 14.2 2 12l2-2.2L3.5 7.1l2.6-1.1L7.2 3.4 10 4l2-2Z"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                      <span class="ml-1 rounded-md bg-sky-100 px-2 py-0.5 text-[11px] font-semibold text-sky-700">Biology Teacher</span>
+                    </div>
+                    <div class="mt-0.5 text-[12.5px] text-ink-500">Biology • Scholars International School, Hyderabad</div>
+                    <div class="mt-0.5 flex items-center gap-1.5 text-[12px] text-ink-400">
+                      <span>12h ago</span>
+                      <span>•</span>
+                      <svg viewBox="0 0 24 24" class="icon-xs"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 3 2.5 14 0 17M12 3.5c-2.5 3-2.5 14 0 17"/></svg>
+                    </div>
+                  </div>
+                  <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                  </button>
+                </header>
+
+                <div class="mt-4 text-[14.5px] leading-relaxed text-ink-900">
+                  Microscope lab day with Grade 9 — exploring onion cell structures up close. Those first "whoa, I can see the cells!" moments are exactly why I love teaching biology. <span>🔬</span>
+                </div>
+
+                <div class="mt-4 overflow-hidden rounded-2xl ring-1 ring-ink-200/60">
+                  <img
+                    src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=1400&h=720&fit=crop"
+                    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1400&h=720&fit=crop'"
+                    class="block aspect-[16/8.2] w-full object-cover"
+                    alt="Biology microscope lab session"
+                  />
+                </div>
+
+                <footer class="mt-4 flex items-center justify-between gap-2 border-t border-ink-100 pt-3">
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M7 10.5V20H4.5A.5.5 0 0 1 4 19.5v-9A.5.5 0 0 1 4.5 10H7Zm0 0 4-6.5a2 2 0 0 1 2 2v3h5.5a1.5 1.5 0 0 1 1.5 1.7l-1 7.3a2 2 0 0 1-2 1.5H7"/></svg>
+                    274
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+                    45
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="m17 4 3 3-3 3"/><path d="M7 7h13"/><path d="m7 20-3-3 3-3"/><path d="M17 17H4"/></svg>
+                    28
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M6.5 4.5h11v15l-5.5-3.5L6.5 19.5v-15Z"/></svg>
+                    Save
+                  </button>
+                </footer>
+              </article>
+
+              <!-- Post: STEM workshop -->
+              <article class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <header class="flex items-start gap-3">
+                  <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=120&h=120&fit=crop&crop=faces" class="h-11 w-11 rounded-full object-cover" alt="" />
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-1.5">
+                      <span class="text-[14.5px] font-semibold text-ink-900">Rahul Mehta</span>
+                      <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-600" fill="currentColor"><path d="M12 2 14 4l2.8-.6 1.1 2.6 2.6 1.1L20 9.8 22 12l-2 2.2.5 2.7-2.6 1.1-1.1 2.6L14 20l-2 2-2-2-2.7.6-1.1-2.6-2.6-1.1L4 14.2 2 12l2-2.2L3.5 7.1l2.6-1.1L7.2 3.4 10 4l2-2Z"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                      <span class="ml-1 rounded-md bg-amber-100 px-2 py-0.5 text-[11px] font-semibold text-amber-700">Science Teacher</span>
+                    </div>
+                    <div class="mt-0.5 text-[12.5px] text-ink-500">Science • Bright Horizons School, Pune</div>
+                    <div class="mt-0.5 flex items-center gap-1.5 text-[12px] text-ink-400">
+                      <span>1d ago</span>
+                      <span>•</span>
+                      <svg viewBox="0 0 24 24" class="icon-xs"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 3 2.5 14 0 17M12 3.5c-2.5 3-2.5 14 0 17"/></svg>
+                    </div>
+                  </div>
+                  <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                  </button>
+                </header>
+
+                <div class="mt-4 text-[14.5px] leading-relaxed text-ink-900">
+                  Our STEM club wrapped up a hands-on robotics workshop — students designed, built and coded their first line-following bots. So proud of this creative bunch! <span>🤖</span>
+                </div>
+
+                <div class="mt-4 overflow-hidden rounded-2xl ring-1 ring-ink-200/60">
+                  <img
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1400&h=720&fit=crop"
+                    onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1400&h=720&fit=crop'"
+                    class="block aspect-[16/8.2] w-full object-cover"
+                    alt="STEM robotics workshop"
+                  />
+                </div>
+
+                <footer class="mt-4 flex items-center justify-between gap-2 border-t border-ink-100 pt-3">
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M7 10.5V20H4.5A.5.5 0 0 1 4 19.5v-9A.5.5 0 0 1 4.5 10H7Zm0 0 4-6.5a2 2 0 0 1 2 2v3h5.5a1.5 1.5 0 0 1 1.5 1.7l-1 7.3a2 2 0 0 1-2 1.5H7"/></svg>
+                    421
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+                    68
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="m17 4 3 3-3 3"/><path d="M7 7h13"/><path d="m7 20-3-3 3-3"/><path d="M17 17H4"/></svg>
+                    52
+                  </button>
+                  <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M6.5 4.5h11v15l-5.5-3.5L6.5 19.5v-15Z"/></svg>
+                    Save
+                  </button>
+                </footer>
+              </article>
+
               <!-- Post 2 (partial preview) -->
               <article class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
                 <header class="flex items-start gap-3">
@@ -365,67 +579,61 @@
             <aside class="space-y-5 self-start sticky top-[88px]">
               <!-- Upcoming Events -->
               <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
-                <header class="mb-4 flex items-center justify-between">
+                <header class="mb-3 flex items-center justify-between">
                   <h3 class="text-[14.5px] font-semibold text-ink-900">Upcoming Events</h3>
-                  <a href="#" class="inline-flex items-center gap-1 text-[12.5px] font-semibold text-brand-600 hover:text-brand-700">View all
+                  <a href="#" class="inline-flex items-center gap-1 text-[12.5px] font-medium text-brand-600 hover:text-brand-700">View all
                     <svg viewBox="0 0 24 24" class="icon-xs"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                   </a>
                 </header>
-                <ul class="space-y-4">
-                  <li class="flex items-start gap-3">
-                    <div class="flex h-14 w-14 flex-shrink-0 flex-col items-center justify-center rounded-xl border border-ink-200/70 bg-ink-100/40">
-                      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">May</div>
-                      <div class="text-[18px] font-bold leading-none text-ink-900">22</div>
+                <ul class="space-y-1">
+                  <li class="-mx-2 flex items-center gap-3 rounded-xl p-2 transition-colors duration-150 hover:bg-ink-50">
+                    <div class="flex h-12 w-12 flex-shrink-0 flex-col items-center justify-center rounded-xl bg-brand-50">
+                      <span class="text-[9.5px] font-semibold uppercase tracking-wide text-brand-600">May</span>
+                      <span class="text-[17px] font-bold leading-none text-brand-700">22</span>
                     </div>
                     <div class="min-w-0 flex-1">
-                      <div class="truncate text-[13.5px] font-semibold text-ink-900">Annual Educators' Symposium</div>
-                      <div class="mt-0.5 text-[12px] text-ink-500">Hyderabad • 1,240 attending</div>
-                      <div class="mt-1.5 flex items-center">
-                        <div class="flex -space-x-2">
-                          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
-                          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
-                          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
-                          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                      <div class="truncate text-[13px] font-semibold text-ink-900">Annual Educators' Symposium</div>
+                      <div class="mt-1.5 flex items-center gap-2">
+                        <div class="flex -space-x-1.5">
+                          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=48&h=48&fit=crop&crop=faces" class="h-5 w-5 rounded-full object-cover ring-2 ring-white" alt="" />
+                          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=48&h=48&fit=crop&crop=faces" class="h-5 w-5 rounded-full object-cover ring-2 ring-white" alt="" />
+                          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=48&h=48&fit=crop&crop=faces" class="h-5 w-5 rounded-full object-cover ring-2 ring-white" alt="" />
                         </div>
-                        <span class="ml-2 text-[11.5px] font-semibold text-ink-500">+124</span>
+                        <span class="text-[11.5px] text-ink-400">Hyderabad · +124 going</span>
                       </div>
                     </div>
                   </li>
-                  <li class="flex items-start gap-3">
-                    <div class="flex h-14 w-14 flex-shrink-0 flex-col items-center justify-center rounded-xl border border-ink-200/70 bg-ink-100/40">
-                      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">May</div>
-                      <div class="text-[18px] font-bold leading-none text-ink-900">28</div>
+                  <li class="-mx-2 flex items-center gap-3 rounded-xl p-2 transition-colors duration-150 hover:bg-ink-50">
+                    <div class="flex h-12 w-12 flex-shrink-0 flex-col items-center justify-center rounded-xl bg-brand-50">
+                      <span class="text-[9.5px] font-semibold uppercase tracking-wide text-brand-600">May</span>
+                      <span class="text-[17px] font-bold leading-none text-brand-700">28</span>
                     </div>
                     <div class="min-w-0 flex-1">
-                      <div class="truncate text-[13.5px] font-semibold text-ink-900">Practical Assessment Workshop</div>
-                      <div class="mt-0.5 text-[12px] text-ink-500">Online • 320 attending</div>
-                      <div class="mt-1.5 flex items-center">
-                        <div class="flex -space-x-2">
-                          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
-                          <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
-                          <img src="https://images.unsplash.com/photo-1545996124-0501ebae84d0?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
-                          <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                      <div class="truncate text-[13px] font-semibold text-ink-900">Practical Assessment Workshop</div>
+                      <div class="mt-1.5 flex items-center gap-2">
+                        <div class="flex -space-x-1.5">
+                          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=48&h=48&fit=crop&crop=faces" class="h-5 w-5 rounded-full object-cover ring-2 ring-white" alt="" />
+                          <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=48&h=48&fit=crop&crop=faces" class="h-5 w-5 rounded-full object-cover ring-2 ring-white" alt="" />
+                          <img src="https://images.unsplash.com/photo-1545996124-0501ebae84d0?w=48&h=48&fit=crop&crop=faces" class="h-5 w-5 rounded-full object-cover ring-2 ring-white" alt="" />
                         </div>
-                        <span class="ml-2 text-[11.5px] font-semibold text-ink-500">+38</span>
+                        <span class="text-[11.5px] text-ink-400">Online · +38 going</span>
                       </div>
                     </div>
                   </li>
-                  <li class="flex items-start gap-3">
-                    <div class="flex h-14 w-14 flex-shrink-0 flex-col items-center justify-center rounded-xl border border-ink-200/70 bg-ink-100/40">
-                      <div class="text-[10px] font-bold uppercase tracking-wider text-ink-500">Jun</div>
-                      <div class="text-[18px] font-bold leading-none text-ink-900">04</div>
+                  <li class="-mx-2 flex items-center gap-3 rounded-xl p-2 transition-colors duration-150 hover:bg-ink-50">
+                    <div class="flex h-12 w-12 flex-shrink-0 flex-col items-center justify-center rounded-xl bg-brand-50">
+                      <span class="text-[9.5px] font-semibold uppercase tracking-wide text-brand-600">Jun</span>
+                      <span class="text-[17px] font-bold leading-none text-brand-700">04</span>
                     </div>
                     <div class="min-w-0 flex-1">
-                      <div class="truncate text-[13.5px] font-semibold text-ink-900">STEM Curriculum Roundtable</div>
-                      <div class="mt-0.5 text-[12px] text-ink-500">Bengaluru • 84 attending</div>
-                      <div class="mt-1.5 flex items-center">
-                        <div class="flex -space-x-2">
-                          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
-                          <img src="https://images.unsplash.com/photo-1546961342-c0ee2627ee59?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
-                          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
-                          <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt="" />
+                      <div class="truncate text-[13px] font-semibold text-ink-900">STEM Curriculum Roundtable</div>
+                      <div class="mt-1.5 flex items-center gap-2">
+                        <div class="flex -space-x-1.5">
+                          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=48&h=48&fit=crop&crop=faces" class="h-5 w-5 rounded-full object-cover ring-2 ring-white" alt="" />
+                          <img src="https://images.unsplash.com/photo-1546961342-c0ee2627ee59?w=48&h=48&fit=crop&crop=faces" class="h-5 w-5 rounded-full object-cover ring-2 ring-white" alt="" />
+                          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=48&h=48&fit=crop&crop=faces" class="h-5 w-5 rounded-full object-cover ring-2 ring-white" alt="" />
                         </div>
-                        <span class="ml-2 text-[11.5px] font-semibold text-ink-500">+12</span>
+                        <span class="text-[11.5px] text-ink-400">Bengaluru · +12 going</span>
                       </div>
                     </div>
                   </li>
@@ -434,84 +642,78 @@
 
               <!-- Communities to join -->
               <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
-                <header class="mb-4 flex items-center justify-between">
+                <header class="mb-3 flex items-center justify-between">
                   <h3 class="text-[14.5px] font-semibold text-ink-900">Communities to join</h3>
-                  <a href="#" class="inline-flex items-center gap-1 text-[12.5px] font-semibold text-brand-600 hover:text-brand-700">View all
+                  <a href="#" class="inline-flex items-center gap-1 text-[12.5px] font-medium text-brand-600 hover:text-brand-700">View all
                     <svg viewBox="0 0 24 24" class="icon-xs"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                   </a>
                 </header>
-                <ul class="space-y-3">
-                  <li class="flex items-center gap-3">
-                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-violet-500 to-indigo-600 text-white">
-                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(-60 12 12)"/></svg>
-                    </div>
+                <ul class="space-y-1">
+                  <li class="-mx-2 flex items-center gap-3 rounded-xl p-2 transition-colors duration-150 hover:bg-ink-50">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=96&h=96&fit=crop" class="h-10 w-10 flex-shrink-0 rounded-xl object-cover ring-1 ring-ink-200/60" alt="" />
                     <div class="min-w-0 flex-1">
-                      <div class="truncate text-[13.5px] font-semibold text-ink-900">Physics Teachers India</div>
-                      <div class="text-[11.5px] text-ink-500">12.3K members • Active today</div>
+                      <div class="truncate text-[13px] font-semibold text-ink-900">Physics Teachers India</div>
+                      <div class="mt-0.5 text-[11.5px] text-ink-400">12.3K members</div>
                     </div>
-                    <button class="rounded-full border border-ink-200 bg-white px-3.5 py-1.5 text-[12px] font-semibold text-brand-600 hover:bg-brand-50">Join</button>
+                    <button class="inline-flex flex-shrink-0 items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-[13px] font-semibold text-brand-600 transition-colors hover:bg-brand-50">Join</button>
                   </li>
-                  <li class="flex items-center gap-3">
-                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-teal-500 to-emerald-600 text-white">
-                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15.5H5.5A1.5 1.5 0 0 1 4 18V5.5Z"/><path d="M13 4h5.5A1.5 1.5 0 0 1 20 5.5V18a1.5 1.5 0 0 1-1.5 1.5H13V4Z"/></svg>
-                    </div>
+                  <li class="-mx-2 flex items-center gap-3 rounded-xl p-2 transition-colors duration-150 hover:bg-ink-50">
+                    <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=96&h=96&fit=crop" class="h-10 w-10 flex-shrink-0 rounded-xl object-cover ring-1 ring-ink-200/60" alt="" />
                     <div class="min-w-0 flex-1">
-                      <div class="truncate text-[13.5px] font-semibold text-ink-900">NEP 2020 Implementation</div>
-                      <div class="text-[11.5px] text-ink-500">8.9K members • Active today</div>
+                      <div class="truncate text-[13px] font-semibold text-ink-900">NEP 2020 Implementation</div>
+                      <div class="mt-0.5 text-[11.5px] text-ink-400">8.9K members</div>
                     </div>
-                    <button class="rounded-full border border-ink-200 bg-white px-3.5 py-1.5 text-[12px] font-semibold text-brand-600 hover:bg-brand-50">Join</button>
+                    <button class="inline-flex flex-shrink-0 items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-[13px] font-semibold text-brand-600 transition-colors hover:bg-brand-50">Join</button>
                   </li>
-                  <li class="flex items-center gap-3">
-                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-orange-500 to-rose-500 text-white">
-                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 3.5h6M10 3.5v5.5L5 18a2 2 0 0 0 1.8 2.5h10.4A2 2 0 0 0 19 18l-5-9V3.5"/></svg>
-                    </div>
+                  <li class="-mx-2 flex items-center gap-3 rounded-xl p-2 transition-colors duration-150 hover:bg-ink-50">
+                    <img src="https://images.unsplash.com/photo-1554475901-4538ddfbccc2?w=96&h=96&fit=crop" class="h-10 w-10 flex-shrink-0 rounded-xl object-cover ring-1 ring-ink-200/60" alt="" />
                     <div class="min-w-0 flex-1">
-                      <div class="truncate text-[13.5px] font-semibold text-ink-900">STEM Curriculum Design</div>
-                      <div class="text-[11.5px] text-ink-500">5.1K members • Active today</div>
+                      <div class="truncate text-[13px] font-semibold text-ink-900">STEM Curriculum Design</div>
+                      <div class="mt-0.5 text-[11.5px] text-ink-400">5.1K members</div>
                     </div>
-                    <button class="rounded-full border border-ink-200 bg-white px-3.5 py-1.5 text-[12px] font-semibold text-brand-600 hover:bg-brand-50">Join</button>
+                    <button class="inline-flex flex-shrink-0 items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-[13px] font-semibold text-brand-600 transition-colors hover:bg-brand-50">Join</button>
                   </li>
                 </ul>
               </section>
 
               <!-- Jobs matching you -->
               <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
-                <header class="mb-4 flex items-center justify-between">
+                <header class="mb-3 flex items-center justify-between">
                   <h3 class="text-[14.5px] font-semibold text-ink-900">Jobs matching you</h3>
-                  <a href="#" class="inline-flex items-center gap-1 text-[12.5px] font-semibold text-brand-600 hover:text-brand-700">View all
+                  <a href="#" class="inline-flex items-center gap-1 text-[12.5px] font-medium text-brand-600 hover:text-brand-700">View all
                     <svg viewBox="0 0 24 24" class="icon-xs"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                   </a>
                 </header>
-                <ul class="space-y-4">
-                  <li class="flex items-start gap-3">
-                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-rose-500 to-red-600 text-white">
-                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-7h6v7"/></svg>
+                <ul class="space-y-1">
+                  <li class="-mx-2 flex items-center gap-3 rounded-xl p-2 transition-colors duration-150 hover:bg-ink-50">
+                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-100">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
                     </div>
                     <div class="min-w-0 flex-1">
-                      <div class="truncate text-[13.5px] font-semibold text-ink-900">Physics Teacher (Senior Grade)</div>
-                      <div class="text-[11.5px] text-ink-500">Greenfield Academy • Bengaluru</div>
+                      <div class="truncate text-[13px] font-semibold text-ink-900">Physics Teacher (Senior Grade)</div>
+                      <div class="mt-0.5 truncate text-[11.5px] text-ink-400">Greenfield Academy · Bengaluru</div>
                     </div>
-                    <span class="rounded-md bg-emerald-100 px-2 py-0.5 text-[11px] font-semibold text-emerald-700">Full-time</span>
+                    <span class="flex-shrink-0 rounded-md bg-ink-100 px-2 py-0.5 text-[10.5px] font-medium text-ink-500">Full-time</span>
                   </li>
-                  <li class="flex items-start gap-3">
-                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 text-white">
-                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><polygon points="12,3 21,8 12,13 3,8"/><polyline points="3,13 12,18 21,13"/></svg>
+                  <li class="-mx-2 flex items-center gap-3 rounded-xl p-2 transition-colors duration-150 hover:bg-ink-50">
+                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 ring-1 ring-brand-100">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
                     </div>
                     <div class="min-w-0 flex-1">
-                      <div class="truncate text-[13.5px] font-semibold text-ink-900">Curriculum Coordinator — Science</div>
-                      <div class="text-[11.5px] text-ink-500">Scholars International School • Hyderabad</div>
+                      <div class="truncate text-[13px] font-semibold text-ink-900">Curriculum Coordinator — Science</div>
+                      <div class="mt-0.5 truncate text-[11.5px] text-ink-400">Scholars International · Hyderabad</div>
                     </div>
-                    <span class="rounded-md bg-sky-100 px-2 py-0.5 text-[11px] font-semibold text-sky-700">Full-time</span>
+                    <span class="flex-shrink-0 rounded-md bg-ink-100 px-2 py-0.5 text-[10.5px] font-medium text-ink-500">Full-time</span>
                   </li>
-                  <li class="flex items-start gap-3">
-                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 text-white">
-                      <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 3v3M12 18v3M5 5l2 2M17 17l2 2M3 12h3M18 12h3M5 19l2-2M17 7l2-2"/><circle cx="12" cy="12" r="4"/></svg>
+                  <li class="-mx-2 flex items-center gap-3 rounded-xl p-2 transition-colors duration-150 hover:bg-ink-50">
+                    <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-amber-50 text-amber-600 ring-1 ring-amber-100">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg>
                     </div>
                     <div class="min-w-0 flex-1">
-                      <div class="truncate text-[13.5px] font-semibold text-ink-900">STEM Program Lead</div>
-                      <div class="text-[11.5px] text-ink-500">Bright Horizons School • Pune</div>
+                      <div class="truncate text-[13px] font-semibold text-ink-900">STEM Program Lead</div>
+                      <div class="mt-0.5 truncate text-[11.5px] text-ink-400">Bright Horizons School · Pune</div>
                     </div>
-                    <span class="rounded-md bg-violet-100 px-2 py-0.5 text-[11px] font-semibold text-violet-700">Contract</span>
+                    <span class="flex-shrink-0 rounded-md bg-ink-100 px-2 py-0.5 text-[10.5px] font-medium text-ink-500">Contract</span>
                   </li>
                 </ul>
               </section>

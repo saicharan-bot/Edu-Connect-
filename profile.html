@@ -24,6 +24,8 @@
       .icon{width:20px;height:20px;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
       .icon-sm{width:16px;height:16px;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
       .icon-xs{width:14px;height:14px;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      @keyframes tabFade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+      .tab-fade{animation:tabFade .28s ease}
     </style>
   </head>
   <body class="min-h-screen">
@@ -71,16 +73,30 @@
         <!-- =================== MAIN + NAVBAR =================== -->
         <div class="flex min-w-0 flex-1 flex-col gap-5">
           <!-- NAVBAR -->
-          <header class="sticky top-5 z-20 -mb-5 flex items-center gap-5 bg-page pb-5">
-            <div class="flex h-12 flex-1 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-4 shadow-card">
-              <svg viewBox="0 0 24 24" class="icon text-ink-400"><path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
-              <input type="text" placeholder="Search teachers, topics, resources…" class="flex-1 bg-transparent text-[14px] text-ink-600 placeholder:text-ink-400 focus:outline-none"/>
-              <div class="flex h-7 items-center gap-1 rounded-md border border-ink-200 bg-ink-100/60 px-2 text-[11px] font-semibold text-ink-500"><span>⌘</span><span>K</span></div>
-            </div>
-            <div class="flex h-12 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-3 shadow-card">
-              <button class="relative grid h-9 w-9 place-items-center rounded-full text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg><span class="absolute -right-0.5 -top-0.5 grid h-5 min-w-[20px] place-items-center rounded-full bg-brand-600 px-1 text-[10px] font-bold text-white ring-2 ring-white">3</span></button>
-              <button class="relative grid h-9 w-9 place-items-center rounded-full text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"/></svg><span class="absolute right-1 top-1 h-2.5 w-2.5 rounded-full bg-brand-600 ring-2 ring-white"></span></button>
-              <a href="profile.html" class="flex items-center gap-2 rounded-full hover:bg-ink-100 pl-0.5 pr-2 py-0.5"><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-9 w-9 rounded-full object-cover" alt=""/><svg viewBox="0 0 24 24" class="icon-sm text-ink-500"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></a>
+          <header class="sticky top-5 z-20 -mb-5 bg-page pb-5">
+            <div class="flex items-center gap-3 rounded-2xl border border-ink-200/70 bg-white/85 px-3 py-2.5 shadow-[0_10px_30px_-14px_rgba(15,23,42,0.25)] backdrop-blur-xl">
+              <!-- Search -->
+              <label class="group flex h-12 flex-1 items-center gap-2.5 rounded-full border border-ink-200/70 bg-[#F8FAFC] px-4 transition-all duration-200 focus-within:border-brand-300 focus-within:bg-white focus-within:shadow-[0_0_0_4px_rgba(91,108,255,0.12)]">
+                <svg viewBox="0 0 24 24" class="icon text-ink-400 transition-colors group-focus-within:text-brand-500"><path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+                <input type="text" placeholder="Search teachers, topics, resources…" class="flex-1 bg-transparent text-[14px] text-ink-700 placeholder:text-ink-400 focus:outline-none"/>
+                <span class="hidden h-[26px] select-none items-center rounded-lg border border-ink-200 bg-white px-2 text-[11px] font-semibold text-ink-400 sm:flex">⌘K</span>
+              </label>
+              <!-- Right actions -->
+              <div class="flex h-12 items-center gap-0.5 rounded-full border border-ink-200/70 bg-[#F8FAFC] px-1.5">
+                <a href="messages.html" class="relative grid h-9 w-9 place-items-center rounded-full text-ink-500 transition-all duration-200 hover:bg-white hover:text-ink-900 hover:shadow-sm active:scale-90">
+                  <svg viewBox="0 0 24 24" class="icon"><path d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+                  <span class="absolute -right-0.5 -top-0.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-brand-600 px-1 text-[10px] font-bold text-white ring-2 ring-white">3</span>
+                </a>
+                <a href="notifications.html" class="relative grid h-9 w-9 place-items-center rounded-full text-ink-500 transition-all duration-200 hover:bg-white hover:text-ink-900 hover:shadow-sm active:scale-90">
+                  <svg viewBox="0 0 24 24" class="icon"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"/></svg>
+                  <span class="absolute right-1.5 top-1.5 h-2.5 w-2.5 rounded-full bg-brand-600 ring-2 ring-white"></span>
+                </a>
+                <span class="mx-1 h-6 w-px bg-ink-200"></span>
+                <a href="profile.html" class="group flex items-center gap-1 rounded-full py-0.5 pl-0.5 pr-1.5 transition-all duration-200 hover:bg-white hover:shadow-sm active:scale-95">
+                  <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-9 w-9 rounded-full object-cover" alt=""/>
+                  <svg viewBox="0 0 24 24" class="icon-sm text-ink-400 transition-transform duration-200 group-hover:translate-y-0.5"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+                </a>
+              </div>
             </div>
           </header>
 
@@ -185,11 +201,11 @@
                     </span>
                   </div>
                   <div class="mt-5 flex items-center gap-2">
-                    <button class="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-4 py-2.5 text-[13px] font-semibold text-white shadow-[0_6px_16px_-4px_rgba(59,91,254,0.45)] transition hover:bg-brand-700 hover:shadow-[0_10px_22px_-4px_rgba(59,91,254,0.55)]">
+                    <button class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brand-700">
                       <svg viewBox="0 0 24 24" class="icon-sm"><path d="M16.5 3.5 20.5 7.5 9 19l-5 1 1-5z"/></svg>
                       Edit Profile
                     </button>
-                    <button class="inline-flex items-center gap-2 rounded-xl border border-ink-200 bg-white px-4 py-2.5 text-[13px] font-semibold text-ink-700 hover:bg-ink-50">
+                    <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-[13px] font-semibold text-brand-600 transition-colors hover:bg-brand-50">
                       <svg viewBox="0 0 24 24" class="icon-sm"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.5 10.5 7-3.5M8.5 13.5l7 3.5"/></svg>
                       Share Profile
                     </button>
@@ -249,13 +265,18 @@
 
           <!-- ========== TABS ========== -->
           <section class="flex items-center gap-7 border-b border-ink-200/70 px-1">
-            <button class="relative px-1 py-3 text-[14px] font-semibold text-brand-600">
+            <button id="tabBtnPosts" type="button" onclick="showProfileTab('posts')" class="relative px-1 py-3 text-[14px] font-semibold text-brand-600">
               Posts
-              <span class="absolute inset-x-0 -bottom-[1px] h-[3px] rounded-t bg-brand-600"></span>
+              <span id="tabLinePosts" class="absolute inset-x-0 -bottom-[1px] h-[3px] rounded-t bg-brand-600"></span>
             </button>
-            <button class="px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">About</button>
+            <button id="tabBtnAbout" type="button" onclick="showProfileTab('about')" class="relative px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">
+              About
+              <span id="tabLineAbout" class="absolute inset-x-0 -bottom-[1px] hidden h-[3px] rounded-t bg-brand-600"></span>
+            </button>
           </section>
 
+          <!-- ========== TAB PANEL: POSTS ========== -->
+          <div id="panelPosts" class="tab-fade">
           <!-- ========== POST CARD ========== -->
           <article class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
             <header class="flex items-start gap-3">
@@ -322,8 +343,344 @@
               </button>
             </footer>
           </article>
+          </div>
+          <!-- ========== /TAB PANEL: POSTS ========== -->
+
+          <!-- ========== TAB PANEL: ABOUT ========== -->
+          <div id="panelAbout" class="hidden space-y-4">
+
+            <!-- 1. ABOUT -->
+            <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+              <div class="flex items-center gap-2.5">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-brand-50 text-brand-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg></div>
+                <h2 class="text-[15px] font-semibold text-ink-900">About</h2>
+              </div>
+              <p class="mt-4 text-[13.5px] leading-relaxed text-ink-700">Sadrush Anand is a passionate Physics educator with over 8 years of experience teaching secondary and senior-secondary students. He specialises in transforming abstract physical concepts into intuitive, real-world learning experiences that spark curiosity and build lasting understanding.</p>
+              <div class="mt-5 space-y-4">
+                <div>
+                  <h3 class="text-[12px] font-semibold uppercase tracking-wider text-brand-600">Teaching Philosophy</h3>
+                  <p class="mt-1.5 text-[13.5px] leading-relaxed text-ink-700">Every student can understand physics when it's connected to the world around them. My classrooms prioritise inquiry, hands-on experimentation, and conceptual clarity over rote memorisation — helping learners think and reason like scientists.</p>
+                </div>
+                <div>
+                  <h3 class="text-[12px] font-semibold uppercase tracking-wider text-brand-600">Areas of Expertise</h3>
+                  <p class="mt-1.5 text-[13.5px] leading-relaxed text-ink-700">Mechanics, electromagnetism and modern physics; competitive-exam foundation (JEE/NEET); curriculum design; and integrating educational technology into everyday teaching.</p>
+                </div>
+                <div>
+                  <h3 class="text-[12px] font-semibold uppercase tracking-wider text-brand-600">Passion &amp; Interests</h3>
+                  <p class="mt-1.5 text-[13.5px] leading-relaxed text-ink-700">Beyond the classroom, I mentor school science-fair teams, run a student robotics club, and actively share teaching resources with the educator community to make quality STEM learning accessible to all.</p>
+                </div>
+              </div>
+            </section>
+
+            <!-- 2. EXPERIENCE -->
+            <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+              <div class="flex items-center gap-2.5">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-violet-50 text-violet-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"/></svg></div>
+                <h2 class="text-[15px] font-semibold text-ink-900">Experience</h2>
+              </div>
+              <ol class="relative mt-5 space-y-6">
+                <span class="pointer-events-none absolute left-5 top-3 bottom-3 w-px bg-ink-200" aria-hidden="true"></span>
+
+                <li class="relative flex gap-4">
+                  <div class="z-10 grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600 ring-4 ring-white"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
+                  <div class="min-w-0 flex-1 rounded-xl p-1.5 transition hover:bg-ink-50">
+                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                      <h3 class="text-[14px] font-semibold text-ink-900">Senior Physics Teacher</h3>
+                      <span class="rounded-full bg-emerald-50 px-2 py-0.5 text-[10.5px] font-semibold text-emerald-700">Current</span>
+                    </div>
+                    <div class="mt-0.5 text-[13px] font-medium text-brand-600">Greenfield Academy</div>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] text-ink-500">
+                      <span class="inline-flex items-center gap-1"><svg viewBox="0 0 24 24" class="icon-xs"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg>2019 — Present · 5 yrs</span>
+                      <span class="inline-flex items-center gap-1"><svg viewBox="0 0 24 24" class="icon-xs"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>Hyderabad, India · Full-time</span>
+                    </div>
+                    <p class="mt-2 text-[13px] leading-relaxed text-ink-700">Lead physics instructor for Grades 11–12, owning the conceptual-physics curriculum and mentoring junior science faculty.</p>
+                    <ul class="mt-2 space-y-1.5">
+                      <li class="flex gap-2 text-[12.5px] leading-relaxed text-ink-600"><svg viewBox="0 0 24 24" class="icon-xs mt-[3px] flex-shrink-0 text-emerald-500"><path d="m4.5 12.75 6 6 9-13.5"/></svg><span>Improved board-exam physics averages by 22% over three academic years.</span></li>
+                      <li class="flex gap-2 text-[12.5px] leading-relaxed text-ink-600"><svg viewBox="0 0 24 24" class="icon-xs mt-[3px] flex-shrink-0 text-emerald-500"><path d="m4.5 12.75 6 6 9-13.5"/></svg><span>Founded the school's first student robotics &amp; innovation club.</span></li>
+                      <li class="flex gap-2 text-[12.5px] leading-relaxed text-ink-600"><svg viewBox="0 0 24 24" class="icon-xs mt-[3px] flex-shrink-0 text-emerald-500"><path d="m4.5 12.75 6 6 9-13.5"/></svg><span>Mentored 40+ students to regional and national science-fair finals.</span></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="relative flex gap-4">
+                  <div class="z-10 grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-violet-50 text-violet-600 ring-4 ring-white"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
+                  <div class="min-w-0 flex-1 rounded-xl p-1.5 transition hover:bg-ink-50">
+                    <h3 class="text-[14px] font-semibold text-ink-900">Physics Teacher</h3>
+                    <div class="mt-0.5 text-[13px] font-medium text-brand-600">Bright Future School</div>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] text-ink-500">
+                      <span class="inline-flex items-center gap-1"><svg viewBox="0 0 24 24" class="icon-xs"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg>2016 — 2019 · 3 yrs</span>
+                      <span class="inline-flex items-center gap-1"><svg viewBox="0 0 24 24" class="icon-xs"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>Hyderabad, India · Full-time</span>
+                    </div>
+                    <p class="mt-2 text-[13px] leading-relaxed text-ink-700">Taught physics across Grades 9–12 and introduced inquiry-based laboratory sessions into the science programme.</p>
+                    <ul class="mt-2 space-y-1.5">
+                      <li class="flex gap-2 text-[12.5px] leading-relaxed text-ink-600"><svg viewBox="0 0 24 24" class="icon-xs mt-[3px] flex-shrink-0 text-emerald-500"><path d="m4.5 12.75 6 6 9-13.5"/></svg><span>Developed a hands-on experiments library later adopted school-wide.</span></li>
+                      <li class="flex gap-2 text-[12.5px] leading-relaxed text-ink-600"><svg viewBox="0 0 24 24" class="icon-xs mt-[3px] flex-shrink-0 text-emerald-500"><path d="m4.5 12.75 6 6 9-13.5"/></svg><span>Voted "Most Engaging Educator" by students two years running.</span></li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="relative flex gap-4">
+                  <div class="z-10 grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-sky-50 text-sky-600 ring-4 ring-white"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
+                  <div class="min-w-0 flex-1 rounded-xl p-1.5 transition hover:bg-ink-50">
+                    <h3 class="text-[14px] font-semibold text-ink-900">Assistant Science Teacher</h3>
+                    <div class="mt-0.5 text-[13px] font-medium text-brand-600">Vidya Vihar High School</div>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[12px] text-ink-500">
+                      <span class="inline-flex items-center gap-1"><svg viewBox="0 0 24 24" class="icon-xs"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg>2014 — 2016 · 2 yrs</span>
+                      <span class="inline-flex items-center gap-1"><svg viewBox="0 0 24 24" class="icon-xs"><path d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/></svg>Warangal, India · Full-time</span>
+                    </div>
+                    <p class="mt-2 text-[13px] leading-relaxed text-ink-700">Taught general science and physics for Grades 8–10, with a focus on practical demonstrations.</p>
+                    <ul class="mt-2 space-y-1.5">
+                      <li class="flex gap-2 text-[12.5px] leading-relaxed text-ink-600"><svg viewBox="0 0 24 24" class="icon-xs mt-[3px] flex-shrink-0 text-emerald-500"><path d="m4.5 12.75 6 6 9-13.5"/></svg><span>Built the school's first interactive science discovery corner.</span></li>
+                    </ul>
+                  </div>
+                </li>
+              </ol>
+            </section>
+
+            <!-- 3. EDUCATION -->
+            <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+              <div class="flex items-center gap-2.5">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-emerald-50 text-emerald-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg></div>
+                <h2 class="text-[15px] font-semibold text-ink-900">Education</h2>
+              </div>
+              <div class="mt-5 space-y-3">
+                <div class="flex gap-4 rounded-xl border border-ink-200/70 p-4 transition hover:bg-ink-50">
+                  <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-emerald-50 text-emerald-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg></div>
+                  <div class="min-w-0 flex-1">
+                    <h3 class="text-[14px] font-semibold text-ink-900">M.Sc. in Physics</h3>
+                    <div class="mt-0.5 text-[13px] font-medium text-brand-600">Osmania University</div>
+                    <div class="mt-1 text-[12px] text-ink-500">2012 — 2014 · Hyderabad, India</div>
+                    <p class="mt-1.5 text-[12.5px] leading-relaxed text-ink-600">Specialised in Electromagnetic Theory &amp; Quantum Mechanics. Graduated with First Class Distinction.</p>
+                  </div>
+                </div>
+                <div class="flex gap-4 rounded-xl border border-ink-200/70 p-4 transition hover:bg-ink-50">
+                  <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-emerald-50 text-emerald-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg></div>
+                  <div class="min-w-0 flex-1">
+                    <h3 class="text-[14px] font-semibold text-ink-900">B.Ed. — Physical Science</h3>
+                    <div class="mt-0.5 text-[13px] font-medium text-brand-600">Osmania University</div>
+                    <div class="mt-1 text-[12px] text-ink-500">2014 — 2015 · Hyderabad, India</div>
+                    <p class="mt-1.5 text-[12.5px] leading-relaxed text-ink-600">Focused on science pedagogy, classroom management and inclusive teaching practices.</p>
+                  </div>
+                </div>
+                <div class="flex gap-4 rounded-xl border border-ink-200/70 p-4 transition hover:bg-ink-50">
+                  <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-emerald-50 text-emerald-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/></svg></div>
+                  <div class="min-w-0 flex-1">
+                    <h3 class="text-[14px] font-semibold text-ink-900">B.Sc. — Physics, Mathematics &amp; Chemistry</h3>
+                    <div class="mt-0.5 text-[13px] font-medium text-brand-600">Nizam College</div>
+                    <div class="mt-1 text-[12px] text-ink-500">2009 — 2012 · Hyderabad, India</div>
+                    <p class="mt-1.5 text-[12.5px] leading-relaxed text-ink-600">Completed UGC-NET in Physical Science following graduation.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 4. SKILLS & EXPERTISE -->
+            <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+              <div class="flex items-center gap-2.5">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-sky-50 text-sky-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.456-2.456L14.25 6l1.035-.259a3.375 3.375 0 0 0 2.456-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"/></svg></div>
+                <h2 class="text-[15px] font-semibold text-ink-900">Skills &amp; Expertise</h2>
+              </div>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span class="rounded-full bg-brand-50 px-3 py-1.5 text-[12.5px] font-medium text-brand-700 ring-1 ring-brand-100 transition hover:bg-brand-100">Physics</span>
+                <span class="rounded-full bg-brand-50 px-3 py-1.5 text-[12.5px] font-medium text-brand-700 ring-1 ring-brand-100 transition hover:bg-brand-100">STEM Education</span>
+                <span class="rounded-full bg-brand-50 px-3 py-1.5 text-[12.5px] font-medium text-brand-700 ring-1 ring-brand-100 transition hover:bg-brand-100">Classroom Teaching</span>
+                <span class="rounded-full bg-brand-50 px-3 py-1.5 text-[12.5px] font-medium text-brand-700 ring-1 ring-brand-100 transition hover:bg-brand-100">Curriculum Design</span>
+                <span class="rounded-full bg-brand-50 px-3 py-1.5 text-[12.5px] font-medium text-brand-700 ring-1 ring-brand-100 transition hover:bg-brand-100">Conceptual Learning</span>
+                <span class="rounded-full bg-brand-50 px-3 py-1.5 text-[12.5px] font-medium text-brand-700 ring-1 ring-brand-100 transition hover:bg-brand-100">Student Mentorship</span>
+                <span class="rounded-full bg-brand-50 px-3 py-1.5 text-[12.5px] font-medium text-brand-700 ring-1 ring-brand-100 transition hover:bg-brand-100">Educational Technology</span>
+                <span class="rounded-full bg-brand-50 px-3 py-1.5 text-[12.5px] font-medium text-brand-700 ring-1 ring-brand-100 transition hover:bg-brand-100">Lab Experimentation</span>
+                <span class="rounded-full bg-brand-50 px-3 py-1.5 text-[12.5px] font-medium text-brand-700 ring-1 ring-brand-100 transition hover:bg-brand-100">Exam Preparation</span>
+                <span class="rounded-full bg-brand-50 px-3 py-1.5 text-[12.5px] font-medium text-brand-700 ring-1 ring-brand-100 transition hover:bg-brand-100">Lesson Planning</span>
+              </div>
+            </section>
+
+            <!-- 5. LANGUAGES -->
+            <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+              <div class="flex items-center gap-2.5">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-rose-50 text-rose-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802"/></svg></div>
+                <h2 class="text-[15px] font-semibold text-ink-900">Languages</h2>
+              </div>
+              <div class="mt-4 space-y-3">
+                <div class="flex items-center justify-between gap-4 rounded-xl border border-ink-200/70 p-3.5 transition hover:bg-ink-50">
+                  <div>
+                    <div class="text-[13.5px] font-semibold text-ink-900">Telugu</div>
+                    <div class="text-[12px] text-ink-500">Native proficiency</div>
+                  </div>
+                  <div class="flex items-center gap-1.5"><span class="h-1.5 w-7 rounded-full bg-brand-600"></span><span class="h-1.5 w-7 rounded-full bg-brand-600"></span><span class="h-1.5 w-7 rounded-full bg-brand-600"></span><span class="h-1.5 w-7 rounded-full bg-brand-600"></span></div>
+                </div>
+                <div class="flex items-center justify-between gap-4 rounded-xl border border-ink-200/70 p-3.5 transition hover:bg-ink-50">
+                  <div>
+                    <div class="text-[13.5px] font-semibold text-ink-900">Hindi</div>
+                    <div class="text-[12px] text-ink-500">Full professional proficiency</div>
+                  </div>
+                  <div class="flex items-center gap-1.5"><span class="h-1.5 w-7 rounded-full bg-brand-600"></span><span class="h-1.5 w-7 rounded-full bg-brand-600"></span><span class="h-1.5 w-7 rounded-full bg-brand-600"></span><span class="h-1.5 w-7 rounded-full bg-brand-600"></span></div>
+                </div>
+                <div class="flex items-center justify-between gap-4 rounded-xl border border-ink-200/70 p-3.5 transition hover:bg-ink-50">
+                  <div>
+                    <div class="text-[13.5px] font-semibold text-ink-900">English</div>
+                    <div class="text-[12px] text-ink-500">Professional working proficiency</div>
+                  </div>
+                  <div class="flex items-center gap-1.5"><span class="h-1.5 w-7 rounded-full bg-brand-600"></span><span class="h-1.5 w-7 rounded-full bg-brand-600"></span><span class="h-1.5 w-7 rounded-full bg-brand-600"></span><span class="h-1.5 w-7 rounded-full bg-ink-200"></span></div>
+                </div>
+                <div class="flex items-center justify-between gap-4 rounded-xl border border-ink-200/70 p-3.5 transition hover:bg-ink-50">
+                  <div>
+                    <div class="text-[13.5px] font-semibold text-ink-900">Tamil</div>
+                    <div class="text-[12px] text-ink-500">Limited working proficiency</div>
+                  </div>
+                  <div class="flex items-center gap-1.5"><span class="h-1.5 w-7 rounded-full bg-brand-600"></span><span class="h-1.5 w-7 rounded-full bg-brand-600"></span><span class="h-1.5 w-7 rounded-full bg-ink-200"></span><span class="h-1.5 w-7 rounded-full bg-ink-200"></span></div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 6. CERTIFICATIONS -->
+            <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+              <div class="flex items-center gap-2.5">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-amber-50 text-amber-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/></svg></div>
+                <h2 class="text-[15px] font-semibold text-ink-900">Certifications</h2>
+              </div>
+              <div class="mt-4 space-y-3">
+                <div class="flex gap-3.5 rounded-xl border border-ink-200/70 p-4 transition hover:bg-ink-50">
+                  <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-amber-50 text-amber-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/></svg></div>
+                  <div class="min-w-0 flex-1">
+                    <h3 class="text-[13.5px] font-semibold text-ink-900">CBSE Master Trainer — Physics</h3>
+                    <div class="mt-0.5 text-[12.5px] font-medium text-brand-600">Central Board of Secondary Education</div>
+                    <div class="mt-0.5 text-[12px] text-ink-500">Issued 2021 · Credential ID CBSE-MT-2021-0487</div>
+                  </div>
+                </div>
+                <div class="flex gap-3.5 rounded-xl border border-ink-200/70 p-4 transition hover:bg-ink-50">
+                  <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-amber-50 text-amber-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/></svg></div>
+                  <div class="min-w-0 flex-1">
+                    <h3 class="text-[13.5px] font-semibold text-ink-900">Google Certified Educator — Level 1 &amp; 2</h3>
+                    <div class="mt-0.5 text-[12.5px] font-medium text-brand-600">Google for Education</div>
+                    <div class="mt-0.5 text-[12px] text-ink-500">Issued 2020 · Credential ID GCE-L2-88213</div>
+                  </div>
+                </div>
+                <div class="flex gap-3.5 rounded-xl border border-ink-200/70 p-4 transition hover:bg-ink-50">
+                  <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-amber-50 text-amber-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/></svg></div>
+                  <div class="min-w-0 flex-1">
+                    <h3 class="text-[13.5px] font-semibold text-ink-900">STEM.org Certified Educator</h3>
+                    <div class="mt-0.5 text-[12.5px] font-medium text-brand-600">STEM.org</div>
+                    <div class="mt-0.5 text-[12px] text-ink-500">Issued 2019</div>
+                  </div>
+                </div>
+                <div class="flex gap-3.5 rounded-xl border border-ink-200/70 p-4 transition hover:bg-ink-50">
+                  <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-amber-50 text-amber-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/></svg></div>
+                  <div class="min-w-0 flex-1">
+                    <h3 class="text-[13.5px] font-semibold text-ink-900">NPTEL: Foundations of Modern Physics</h3>
+                    <div class="mt-0.5 text-[12.5px] font-medium text-brand-600">IIT Madras — NPTEL</div>
+                    <div class="mt-0.5 text-[12px] text-ink-500">Completed 2018 · Online course (Elite + Gold)</div>
+                  </div>
+                </div>
+                <div class="flex gap-3.5 rounded-xl border border-ink-200/70 p-4 transition hover:bg-ink-50">
+                  <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-amber-50 text-amber-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/></svg></div>
+                  <div class="min-w-0 flex-1">
+                    <h3 class="text-[13.5px] font-semibold text-ink-900">Workshop: Inquiry-Based Science Teaching</h3>
+                    <div class="mt-0.5 text-[12.5px] font-medium text-brand-600">Azim Premji Foundation</div>
+                    <div class="mt-0.5 text-[12px] text-ink-500">Attended 2022 · 40-hour workshop</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 7. ACHIEVEMENTS & AWARDS -->
+            <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+              <div class="flex items-center gap-2.5">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-indigo-50 text-indigo-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"/></svg></div>
+                <h2 class="text-[15px] font-semibold text-ink-900">Achievements &amp; Awards</h2>
+              </div>
+              <div class="mt-4 space-y-3">
+                <div class="flex gap-3.5 rounded-xl border border-ink-200/70 p-4 transition hover:bg-ink-50">
+                  <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-indigo-50 text-indigo-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 0 0 2.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 0 1 2.916.52 6.003 6.003 0 0 1-5.395 4.972m0 0a6.726 6.726 0 0 1-2.749 1.35m0 0a6.772 6.772 0 0 1-3.044 0"/></svg></div>
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <h3 class="text-[13.5px] font-semibold text-ink-900">Best Teacher Award</h3>
+                      <span class="rounded-full bg-ink-100 px-2 py-0.5 text-[10.5px] font-semibold text-ink-600">2022</span>
+                    </div>
+                    <p class="mt-1 text-[12.5px] leading-relaxed text-ink-600">Recognised by Greenfield Academy for outstanding contribution to STEM education and student mentorship.</p>
+                  </div>
+                </div>
+                <div class="flex gap-3.5 rounded-xl border border-ink-200/70 p-4 transition hover:bg-ink-50">
+                  <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-indigo-50 text-indigo-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg></div>
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <h3 class="text-[13.5px] font-semibold text-ink-900">Published Research</h3>
+                      <span class="rounded-full bg-ink-100 px-2 py-0.5 text-[10.5px] font-semibold text-ink-600">2021</span>
+                    </div>
+                    <p class="mt-1 text-[12.5px] leading-relaxed text-ink-600">Co-authored "Conceptual Approaches to Teaching Mechanics" in the National Journal of Science Education.</p>
+                  </div>
+                </div>
+                <div class="flex gap-3.5 rounded-xl border border-ink-200/70 p-4 transition hover:bg-ink-50">
+                  <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-indigo-50 text-indigo-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M10.34 15.84c-.688-.06-1.386-.09-2.09-.09H7.5a4.5 4.5 0 1 1 0-9h.75c.704 0 1.402-.03 2.09-.09m0 9.18c.253.962.584 1.892.985 2.783.247.55.06 1.21-.463 1.511l-.657.38c-.551.318-1.26.117-1.527-.461a20.845 20.845 0 0 1-1.44-4.282m3.102.069a18.03 18.03 0 0 1-.59-4.59c0-1.586.205-3.124.59-4.59m0 9.18a23.848 23.848 0 0 1 8.835 2.535M10.34 6.66a23.847 23.847 0 0 0 8.835-2.535m0 0A23.74 23.74 0 0 0 18.795 3m.38 1.125a23.91 23.91 0 0 1 1.014 5.395m-1.014 8.855c-.118.38-.245.754-.38 1.125m.38-1.125a23.91 23.91 0 0 0 1.014-5.395m0-3.46c.495.413.811 1.035.811 1.73 0 .695-.316 1.317-.811 1.73m0-3.46a24.347 24.347 0 0 1 0 3.46"/></svg></div>
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <h3 class="text-[13.5px] font-semibold text-ink-900">State-Level Workshop Speaker</h3>
+                      <span class="rounded-full bg-ink-100 px-2 py-0.5 text-[10.5px] font-semibold text-ink-600">2023</span>
+                    </div>
+                    <p class="mt-1 text-[12.5px] leading-relaxed text-ink-600">Delivered sessions on inquiry-based physics teaching to an audience of 200+ educators across the state.</p>
+                  </div>
+                </div>
+                <div class="flex gap-3.5 rounded-xl border border-ink-200/70 p-4 transition hover:bg-ink-50">
+                  <div class="grid h-10 w-10 flex-shrink-0 place-items-center rounded-xl bg-indigo-50 text-indigo-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg></div>
+                  <div class="min-w-0 flex-1">
+                    <div class="flex flex-wrap items-center gap-2">
+                      <h3 class="text-[13.5px] font-semibold text-ink-900">Science Fair Mentor</h3>
+                      <span class="rounded-full bg-ink-100 px-2 py-0.5 text-[10.5px] font-semibold text-ink-600">2018 — Present</span>
+                    </div>
+                    <p class="mt-1 text-[12.5px] leading-relaxed text-ink-600">Mentored student teams to 3 regional wins and 1 national finalist position at inter-school science fairs.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 8. INTERESTS -->
+            <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+              <div class="flex items-center gap-2.5">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-teal-50 text-teal-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"/></svg></div>
+                <h2 class="text-[15px] font-semibold text-ink-900">Interests</h2>
+              </div>
+              <div class="mt-4 grid grid-cols-4 gap-3">
+                <div class="flex flex-col items-center gap-2 rounded-xl border border-ink-200/70 p-4 text-center transition hover:bg-ink-50 hover:shadow-soft">
+                  <div class="grid h-10 w-10 place-items-center rounded-xl bg-teal-50 text-teal-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23-.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg></div>
+                  <span class="text-[12.5px] font-medium text-ink-700">Physics Research</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 rounded-xl border border-ink-200/70 p-4 text-center transition hover:bg-ink-50 hover:shadow-soft">
+                  <div class="grid h-10 w-10 place-items-center rounded-xl bg-teal-50 text-teal-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 0 0 2.25-2.25V6.75a2.25 2.25 0 0 0-2.25-2.25H6.75A2.25 2.25 0 0 0 4.5 6.75v10.5a2.25 2.25 0 0 0 2.25 2.25Zm.75-12h9v9h-9v-9Z"/></svg></div>
+                  <span class="text-[12.5px] font-medium text-ink-700">Robotics</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 rounded-xl border border-ink-200/70 p-4 text-center transition hover:bg-ink-50 hover:shadow-soft">
+                  <div class="grid h-10 w-10 place-items-center rounded-xl bg-teal-50 text-teal-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"/></svg></div>
+                  <span class="text-[12.5px] font-medium text-ink-700">STEM Innovation</span>
+                </div>
+                <div class="flex flex-col items-center gap-2 rounded-xl border border-ink-200/70 p-4 text-center transition hover:bg-ink-50 hover:shadow-soft">
+                  <div class="grid h-10 w-10 place-items-center rounded-xl bg-teal-50 text-teal-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/></svg></div>
+                  <span class="text-[12.5px] font-medium text-ink-700">Science Communication</span>
+                </div>
+              </div>
+            </section>
+
+          </div>
+          <!-- ========== /TAB PANEL: ABOUT ========== -->
         </div>
       </div>
     </div>
+    <script>
+      function showProfileTab(name){
+        var posts = name === 'posts';
+        var panelPosts = document.getElementById('panelPosts');
+        var panelAbout = document.getElementById('panelAbout');
+        panelPosts.classList.toggle('hidden', !posts);
+        panelAbout.classList.toggle('hidden', posts);
+        var active = 'relative px-1 py-3 text-[14px] font-semibold text-brand-600';
+        var idle = 'relative px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900';
+        document.getElementById('tabBtnPosts').className = posts ? active : idle;
+        document.getElementById('tabBtnAbout').className = posts ? idle : active;
+        document.getElementById('tabLinePosts').classList.toggle('hidden', !posts);
+        document.getElementById('tabLineAbout').classList.toggle('hidden', posts);
+        var shown = posts ? panelPosts : panelAbout;
+        shown.classList.remove('tab-fade');
+        void shown.offsetWidth;
+        shown.classList.add('tab-fade');
+      }
+    </script>
   </body>
 </html>

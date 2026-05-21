@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EduConnect — Notifications</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = { theme: { extend: {
+        fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+        colors: {
+          brand: { 50:'#EEF2FF',100:'#E0E7FF',200:'#C7D2FE',500:'#5B6CFF',600:'#3B5BFE',700:'#2E48E0' },
+          ink: { 900:'#0F172A',700:'#334155',600:'#475569',500:'#64748B',400:'#94A3B8',300:'#CBD5E1',200:'#E2E8F0',100:'#F1F5F9' },
+          page: '#F5F6F8',
+        },
+        boxShadow: { card:'0 1px 2px rgba(15,23,42,0.04), 0 1px 1px rgba(15,23,42,0.03)', soft:'0 4px 14px rgba(15,23,42,0.05)' },
+      } } };
+    </script>
+    <style>
+      html,body{font-family:'Inter',system-ui,sans-serif;background:#F5F6F8;color:#0F172A;-webkit-font-smoothing:antialiased}
+      .icon{width:20px;height:20px;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .icon-sm{width:16px;height:16px;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .icon-xs{width:14px;height:14px;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <div class="mx-auto max-w-[1440px] px-6 py-5">
+      <div class="flex items-start gap-6">
+        <!-- =================== SIDEBAR =================== -->
+        <aside class="w-[248px] flex-shrink-0 sticky top-5">
+          <div class="flex items-center gap-3 px-2 pb-5">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-brand-600 to-brand-700 shadow-soft"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15.5H5.5A1.5 1.5 0 0 1 4 18V5.5Z" fill="white"/><path d="M13 4h5.5A1.5 1.5 0 0 1 20 5.5V18a1.5 1.5 0 0 1-1.5 1.5H13V4Z" fill="white" fill-opacity="0.55"/></svg></div>
+            <div class="leading-tight"><div class="text-[18px] font-bold tracking-tight text-ink-900">EduConnect</div><div class="text-[11px] font-medium text-brand-600">Empowering Educators</div></div>
+          </div>
+          <nav class="space-y-1 px-1">
+            <a href="index.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/></svg><span class="text-[14px] font-medium">Home</span></a>
+            <a href="network.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z"/></svg><span class="text-[14px] font-medium">Network</span></a>
+            <a href="communities.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg><span class="text-[14px] font-medium">Communities</span></a>
+            <a href="messages.html" class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><span class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="icon"><path d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg><span class="text-[14px] font-medium">Messages</span></span><span class="grid h-5 min-w-[20px] place-items-center rounded-full bg-brand-600 px-1.5 text-[11px] font-semibold text-white">2</span></a>
+            <a href="resources.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M2.25 12.75V12A2.25 2.25 0 0 1 4.5 9.75h15A2.25 2.25 0 0 1 21.75 12v.75m-8.69-6.44-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z"/></svg><span class="text-[14px] font-medium">Resources</span></a>
+            <a href="events.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg><span class="text-[14px] font-medium">Events</span></a>
+            <a href="jobs.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"/></svg><span class="text-[14px] font-medium">Jobs</span></a>
+          </nav>
+          <div class="my-5 border-t border-ink-200/70"></div>
+          <div class="px-3 pb-2 text-[11px] font-semibold uppercase tracking-wider text-ink-400">Shortcuts</div>
+          <nav class="space-y-1 px-1">
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"/></svg><span class="text-[14px] font-medium">Saved Posts</span></a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"/></svg><span class="text-[14px] font-medium">My Resources</span></a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z"/></svg><span class="text-[14px] font-medium">Teaching Templates</span></a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg><span class="text-[14px] font-medium">Recent Files</span></a>
+          </nav>
+          <div class="mt-6 border-t border-ink-200/70 pt-3">
+            <nav class="space-y-1 px-1">
+              <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.24-.438.613-.43.992a6.759 6.759 0 0 1 0 .255c-.008.378.137.75.43.99l1.004.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 0 1 0-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281Z"/><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg><span class="text-[14px] font-medium">Settings</span></a>
+              <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"/></svg><span class="text-[14px] font-medium">Help & Support</span></a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- =================== MAIN + NAVBAR =================== -->
+        <div class="flex min-w-0 flex-1 flex-col gap-5">
+          <!-- NAVBAR -->
+          <header class="sticky top-5 z-20 -mb-5 bg-page pb-5">
+            <div class="flex items-center gap-3 rounded-2xl border border-ink-200/70 bg-white/85 px-3 py-2.5 shadow-[0_10px_30px_-14px_rgba(15,23,42,0.25)] backdrop-blur-xl">
+              <!-- Search -->
+              <label class="group flex h-12 flex-1 items-center gap-2.5 rounded-full border border-ink-200/70 bg-[#F8FAFC] px-4 transition-all duration-200 focus-within:border-brand-300 focus-within:bg-white focus-within:shadow-[0_0_0_4px_rgba(91,108,255,0.12)]">
+                <svg viewBox="0 0 24 24" class="icon text-ink-400 transition-colors group-focus-within:text-brand-500"><path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+                <input type="text" placeholder="Search teachers, topics, resources…" class="flex-1 bg-transparent text-[14px] text-ink-700 placeholder:text-ink-400 focus:outline-none"/>
+                <span class="hidden h-[26px] select-none items-center rounded-lg border border-ink-200 bg-white px-2 text-[11px] font-semibold text-ink-400 sm:flex">⌘K</span>
+              </label>
+              <!-- Right actions -->
+              <div class="flex h-12 items-center gap-0.5 rounded-full border border-ink-200/70 bg-[#F8FAFC] px-1.5">
+                <a href="messages.html" class="relative grid h-9 w-9 place-items-center rounded-full text-ink-500 transition-all duration-200 hover:bg-white hover:text-ink-900 hover:shadow-sm active:scale-90">
+                  <svg viewBox="0 0 24 24" class="icon"><path d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+                  <span class="absolute -right-0.5 -top-0.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-brand-600 px-1 text-[10px] font-bold text-white ring-2 ring-white">2</span>
+                </a>
+                <a href="notifications.html" class="grid h-9 w-9 place-items-center rounded-full bg-brand-50 text-brand-600 shadow-sm transition-all duration-200 active:scale-90">
+                  <svg viewBox="0 0 24 24" class="icon"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"/></svg>
+                </a>
+                <span class="mx-1 h-6 w-px bg-ink-200"></span>
+                <a href="profile.html" class="group flex items-center gap-1 rounded-full py-0.5 pl-0.5 pr-1.5 transition-all duration-200 hover:bg-white hover:shadow-sm active:scale-95">
+                  <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-9 w-9 rounded-full object-cover" alt=""/>
+                  <svg viewBox="0 0 24 24" class="icon-sm text-ink-400 transition-transform duration-200 group-hover:translate-y-0.5"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+                </a>
+              </div>
+            </div>
+          </header>
+
+          <!-- ===== MAIN CONTENT ===== -->
+          <div class="grid grid-cols-[1fr_340px] gap-6">
+            <main class="space-y-6 min-w-0">
+              <!-- Page header -->
+              <div>
+                <h1 class="text-[28px] font-bold tracking-tight text-ink-900">Notifications</h1>
+                <p class="mt-1 text-[14px] font-medium text-brand-600">Stay updated with your network, communities, resources, and events.</p>
+              </div>
+
+              <!-- Tabs -->
+              <section class="flex items-center gap-7 border-b border-ink-200/70 px-1">
+                <button class="relative px-1 py-3 text-[14px] font-semibold text-brand-600">
+                  All
+                  <span class="absolute inset-x-0 -bottom-[1px] h-[3px] rounded-t bg-brand-600"></span>
+                </button>
+                <button class="inline-flex items-center gap-2 px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">
+                  Unread
+                  <span class="grid h-5 min-w-[20px] place-items-center rounded-full bg-brand-600 px-1.5 text-[11px] font-semibold text-white">4</span>
+                </button>
+                <button class="px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">Mentions</button>
+                <button class="px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">Messages</button>
+                <button class="px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">Communities</button>
+                <button class="px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">Events</button>
+              </section>
+
+              <!-- Notification feed -->
+              <section class="overflow-hidden rounded-2xl border border-ink-200/70 bg-white shadow-card">
+                <div class="flex items-center justify-between border-b border-ink-100 px-5 py-3.5">
+                  <h3 class="text-[13px] font-semibold uppercase tracking-wider text-ink-400">Today</h3>
+                  <button class="text-[12px] font-semibold text-brand-600 hover:text-brand-700">Mark all as read</button>
+                </div>
+                <ul class="divide-y divide-ink-100">
+                  <!-- Maya liked your post (unread) -->
+                  <li class="relative flex items-start gap-3.5 bg-brand-50/50 px-5 py-4 transition hover:bg-brand-50">
+                    <span class="absolute left-2 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-brand-600"></span>
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=80&h=80&fit=crop&crop=faces" class="ml-2.5 h-11 w-11 flex-shrink-0 rounded-full object-cover" alt="" />
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[13.5px] leading-relaxed text-ink-700"><span class="font-semibold text-ink-900">Maya Reyes</span> liked your post on <span class="font-medium text-ink-900">Rotational Motion lesson plan</span>.</div>
+                      <div class="mt-1 text-[11.5px] text-ink-400">10 minutes ago</div>
+                    </div>
+                  </li>
+                  <!-- Rahul commented (unread + CTA) -->
+                  <li class="relative flex items-start gap-3.5 bg-brand-50/50 px-5 py-4 transition hover:bg-brand-50">
+                    <span class="absolute left-2 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-brand-600"></span>
+                    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=80&h=80&fit=crop&crop=faces" class="ml-2.5 h-11 w-11 flex-shrink-0 rounded-full object-cover" alt="" />
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[13.5px] leading-relaxed text-ink-700"><span class="font-semibold text-ink-900">Rahul Mehta</span> commented on your lesson plan: <span class="text-ink-600">"This is exactly what my Grade 9 class needs!"</span></div>
+                      <div class="mt-1.5 flex items-center gap-3">
+                        <span class="text-[11.5px] text-ink-400">25 minutes ago</span>
+                        <button class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brand-700">Reply</button>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Community mention (unread) -->
+                  <li class="relative flex items-start gap-3.5 bg-brand-50/50 px-5 py-4 transition hover:bg-brand-50">
+                    <span class="absolute left-2 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-brand-600"></span>
+                    <div class="ml-2.5 grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-violet-100 to-indigo-50 text-violet-600 ring-1 ring-violet-200/60 shadow-[0_2px_8px_-2px_rgba(139,92,246,0.28)]">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(-60 12 12)"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[13.5px] leading-relaxed text-ink-700"><span class="font-semibold text-ink-900">Physics Teachers India</span> mentioned you in a discussion: <span class="text-ink-600">"Lab safety practices"</span>.</div>
+                      <div class="mt-1.5 flex items-center gap-3">
+                        <span class="text-[11.5px] text-ink-400">1 hour ago</span>
+                        <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-[13px] font-semibold text-brand-600 transition-colors hover:bg-brand-50">View discussion</button>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- STEM event (read) -->
+                  <li class="relative flex items-start gap-3.5 px-5 py-4 transition hover:bg-ink-50">
+                    <div class="ml-2.5 grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-sky-100 to-blue-50 text-blue-600 ring-1 ring-blue-200/60 shadow-[0_2px_8px_-2px_rgba(59,130,246,0.28)]">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[13.5px] leading-relaxed text-ink-700">A new STEM event — <span class="font-semibold text-ink-900">STEM Curriculum Roundtable</span> — is happening near you on Jun 4.</div>
+                      <div class="mt-1.5 flex items-center gap-3">
+                        <span class="text-[11.5px] text-ink-400">2 hours ago</span>
+                        <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-[13px] font-semibold text-brand-600 transition-colors hover:bg-brand-50">View event</button>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Connection request (unread + CTA) -->
+                  <li class="relative flex items-start gap-3.5 bg-brand-50/50 px-5 py-4 transition hover:bg-brand-50">
+                    <span class="absolute left-2 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-brand-600"></span>
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=80&h=80&fit=crop&crop=faces" class="ml-2.5 h-11 w-11 flex-shrink-0 rounded-full object-cover" alt="" />
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[13.5px] leading-relaxed text-ink-700"><span class="font-semibold text-ink-900">Ananya Sharma</span> sent you a connection request.</div>
+                      <div class="mt-1.5 flex items-center gap-2">
+                        <span class="mr-1 text-[11.5px] text-ink-400">3 hours ago</span>
+                        <button class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brand-700">Accept</button>
+                        <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-[13px] font-semibold text-brand-600 transition-colors hover:bg-brand-50">Ignore</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="border-b border-t border-ink-100 px-5 py-3.5">
+                  <h3 class="text-[13px] font-semibold uppercase tracking-wider text-ink-400">Earlier</h3>
+                </div>
+                <ul class="divide-y divide-ink-100">
+                  <!-- Resource download (read) -->
+                  <li class="relative flex items-start gap-3.5 px-5 py-4 transition hover:bg-ink-50">
+                    <div class="ml-2.5 grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-emerald-100 to-emerald-50 text-emerald-600 ring-1 ring-emerald-200/60 shadow-[0_2px_8px_-2px_rgba(16,185,129,0.28)]">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[13.5px] leading-relaxed text-ink-700">Your download of <span class="font-semibold text-ink-900">STEM Lesson Plan Template.pdf</span> completed successfully.</div>
+                      <div class="mt-1 text-[11.5px] text-ink-400">5 hours ago</div>
+                    </div>
+                  </li>
+                  <!-- New message (read + CTA) -->
+                  <li class="relative flex items-start gap-3.5 px-5 py-4 transition hover:bg-ink-50">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=80&h=80&fit=crop&crop=faces" class="ml-2.5 h-11 w-11 flex-shrink-0 rounded-full object-cover" alt="" />
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[13.5px] leading-relaxed text-ink-700"><span class="font-semibold text-ink-900">Dr. Priya Sharma</span> sent you a new message.</div>
+                      <div class="mt-1.5 flex items-center gap-3">
+                        <span class="text-[11.5px] text-ink-400">6 hours ago</span>
+                        <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-[13px] font-semibold text-brand-600 transition-colors hover:bg-brand-50">Open chat</button>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- Community invite (read + CTA) -->
+                  <li class="relative flex items-start gap-3.5 px-5 py-4 transition hover:bg-ink-50">
+                    <div class="ml-2.5 grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-amber-100 to-orange-50 text-orange-600 ring-1 ring-orange-200/60 shadow-[0_2px_8px_-2px_rgba(249,115,22,0.28)]">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[13.5px] leading-relaxed text-ink-700">You've been invited to join the <span class="font-semibold text-ink-900">EdTech Innovators</span> community.</div>
+                      <div class="mt-1.5 flex items-center gap-3">
+                        <span class="text-[11.5px] text-ink-400">1 day ago</span>
+                        <button class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brand-700">Join</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+            </main>
+
+            <!-- ===== RIGHT SIDEBAR ===== -->
+            <aside class="space-y-5 self-start sticky top-[88px]">
+              <!-- Notification Summary -->
+              <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <h3 class="mb-4 text-[14.5px] font-semibold text-ink-900">Notification Summary</h3>
+                <ul class="space-y-3">
+                  <li class="flex items-center gap-3">
+                    <div class="grid h-9 w-9 flex-shrink-0 place-items-center rounded-lg bg-gradient-to-br from-brand-100 to-brand-50 text-brand-600 ring-1 ring-brand-200/60 shadow-[0_2px_6px_-2px_rgba(59,91,254,0.25)]"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"/></svg></div>
+                    <div class="flex-1 text-[13px] font-medium text-ink-700">Unread</div>
+                    <span class="text-[13.5px] font-semibold text-ink-900">4</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <div class="grid h-9 w-9 flex-shrink-0 place-items-center rounded-lg bg-gradient-to-br from-sky-100 to-sky-50 text-sky-600 ring-1 ring-sky-200/60 shadow-[0_2px_6px_-2px_rgba(14,165,233,0.25)]"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 14.5v-8Z"/></svg></div>
+                    <div class="flex-1 text-[13px] font-medium text-ink-700">Messages</div>
+                    <span class="text-[13.5px] font-semibold text-ink-900">2</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <div class="grid h-9 w-9 flex-shrink-0 place-items-center rounded-lg bg-gradient-to-br from-violet-100 to-violet-50 text-violet-600 ring-1 ring-violet-200/60 shadow-[0_2px_6px_-2px_rgba(139,92,246,0.25)]"><svg viewBox="0 0 24 24" class="icon-sm"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="8" r="2.25"/><path d="M2.5 19c.4-2.8 2.6-4.5 5.5-4.5s5.1 1.7 5.5 4.5"/><path d="M15 14c2.4 0 4.3 1.4 4.8 3.5"/></svg></div>
+                    <div class="flex-1 text-[13px] font-medium text-ink-700">Community updates</div>
+                    <span class="text-[13.5px] font-semibold text-ink-900">7</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <div class="grid h-9 w-9 flex-shrink-0 place-items-center rounded-lg bg-gradient-to-br from-amber-100 to-amber-50 text-amber-600 ring-1 ring-amber-200/60 shadow-[0_2px_6px_-2px_rgba(245,158,11,0.25)]"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg></div>
+                    <div class="flex-1 text-[13px] font-medium text-ink-700">Event reminders</div>
+                    <span class="text-[13.5px] font-semibold text-ink-900">3</span>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- Quick Actions -->
+              <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <h3 class="mb-3 text-[14.5px] font-semibold text-ink-900">Quick Actions</h3>
+                <ul class="space-y-1">
+                  <li>
+                    <button class="flex w-full items-center gap-3 rounded-xl px-2.5 py-2.5 text-left text-ink-600 hover:bg-ink-100">
+                      <svg viewBox="0 0 24 24" class="icon-sm text-brand-600"><path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+                      <span class="text-[13.5px] font-medium">Mark all as read</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="flex w-full items-center gap-3 rounded-xl px-2.5 py-2.5 text-left text-ink-600 hover:bg-ink-100">
+                      <svg viewBox="0 0 24 24" class="icon-sm text-ink-500"><path d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.24-.438.613-.43.992a6.759 6.759 0 0 1 0 .255c-.008.378.137.75.43.99l1.004.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 0 1 0-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281Z"/><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+                      <span class="text-[13.5px] font-medium">Notification settings</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="flex w-full items-center gap-3 rounded-xl px-2.5 py-2.5 text-left text-ink-600 hover:bg-ink-100">
+                      <svg viewBox="0 0 24 24" class="icon-sm text-ink-500"><path d="M17 17H5.45a1 1 0 0 1-.78-1.63L6 13.5V9a6 6 0 0 1 9.3-5M18 9.4V13.5l1.33 1.87M3 3l18 18M10 19.5a2 2 0 0 0 4 0"/></svg>
+                      <span class="text-[13.5px] font-medium">Mute communities</span>
+                    </button>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- Recent Activity -->
+              <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <h3 class="mb-3 text-[14.5px] font-semibold text-ink-900">Recent Activity</h3>
+                <ul class="space-y-3.5">
+                  <li class="flex items-start gap-2.5">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=60&h=60&fit=crop&crop=faces" class="h-7 w-7 flex-shrink-0 rounded-full object-cover" alt="" />
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[12px] text-ink-600 leading-snug"><span class="font-semibold text-ink-900">Neha Iyer</span> followed you</div>
+                      <div class="text-[11px] text-ink-400">2h ago</div>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=faces" class="h-7 w-7 flex-shrink-0 rounded-full object-cover" alt="" />
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[12px] text-ink-600 leading-snug"><span class="font-semibold text-ink-900">Amit Patel</span> saved your worksheet</div>
+                      <div class="text-[11px] text-ink-400">4h ago</div>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=60&h=60&fit=crop&crop=faces" class="h-7 w-7 flex-shrink-0 rounded-full object-cover" alt="" />
+                    <div class="min-w-0 flex-1">
+                      <div class="text-[12px] text-ink-600 leading-snug"><span class="font-semibold text-ink-900">Priya Nair</span> shared your post</div>
+                      <div class="text-[11px] text-ink-400">Yesterday</div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

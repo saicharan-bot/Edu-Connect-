@@ -185,34 +185,30 @@
         <!-- ============ CENTER + RIGHT WRAPPER ============ -->
         <div class="flex min-w-0 flex-1 flex-col gap-5">
           <!-- ===== TOP NAVBAR ===== -->
-          <header class="sticky top-5 z-20 -mb-5 flex items-center gap-5 bg-page pb-5">
-            <!-- Search -->
-            <div class="flex h-12 flex-1 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-4 shadow-card">
-              <svg viewBox="0 0 24 24" class="icon text-ink-400"><path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
-              <input
-                type="text"
-                placeholder="Search teachers, topics, resources…"
-                class="flex-1 bg-transparent text-[14px] text-ink-600 placeholder:text-ink-400 focus:outline-none"
-              />
-              <div class="flex h-7 items-center gap-1 rounded-md border border-ink-200 bg-ink-100/60 px-2 text-[11px] font-semibold text-ink-500">
-                <span>⌘</span><span>K</span>
+          <header class="sticky top-5 z-20 -mb-5 bg-page pb-5">
+            <div class="flex items-center gap-3 rounded-2xl border border-ink-200/70 bg-white/85 px-3 py-2.5 shadow-[0_10px_30px_-14px_rgba(15,23,42,0.25)] backdrop-blur-xl">
+              <!-- Search -->
+              <label class="group flex h-12 flex-1 items-center gap-2.5 rounded-full border border-ink-200/70 bg-[#F8FAFC] px-4 transition-all duration-200 focus-within:border-brand-300 focus-within:bg-white focus-within:shadow-[0_0_0_4px_rgba(91,108,255,0.12)]">
+                <svg viewBox="0 0 24 24" class="icon text-ink-400 transition-colors group-focus-within:text-brand-500"><path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+                <input type="text" placeholder="Search teachers, topics, resources…" class="flex-1 bg-transparent text-[14px] text-ink-700 placeholder:text-ink-400 focus:outline-none"/>
+                <span class="hidden h-[26px] select-none items-center rounded-lg border border-ink-200 bg-white px-2 text-[11px] font-semibold text-ink-400 sm:flex">⌘K</span>
+              </label>
+              <!-- Right actions -->
+              <div class="flex h-12 items-center gap-0.5 rounded-full border border-ink-200/70 bg-[#F8FAFC] px-1.5">
+                <a href="messages.html" class="relative grid h-9 w-9 place-items-center rounded-full text-ink-500 transition-all duration-200 hover:bg-white hover:text-ink-900 hover:shadow-sm active:scale-90">
+                  <svg viewBox="0 0 24 24" class="icon"><path d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
+                  <span class="absolute -right-0.5 -top-0.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-brand-600 px-1 text-[10px] font-bold text-white ring-2 ring-white">2</span>
+                </a>
+                <a href="notifications.html" class="relative grid h-9 w-9 place-items-center rounded-full text-ink-500 transition-all duration-200 hover:bg-white hover:text-ink-900 hover:shadow-sm active:scale-90">
+                  <svg viewBox="0 0 24 24" class="icon"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"/></svg>
+                  <span class="absolute right-1.5 top-1.5 h-2.5 w-2.5 rounded-full bg-brand-600 ring-2 ring-white"></span>
+                </a>
+                <span class="mx-1 h-6 w-px bg-ink-200"></span>
+                <a href="profile.html" class="group flex items-center gap-1 rounded-full py-0.5 pl-0.5 pr-1.5 transition-all duration-200 hover:bg-white hover:shadow-sm active:scale-95">
+                  <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-9 w-9 rounded-full object-cover" alt=""/>
+                  <svg viewBox="0 0 24 24" class="icon-sm text-ink-400 transition-transform duration-200 group-hover:translate-y-0.5"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+                </a>
               </div>
-            </div>
-
-            <!-- Right cluster (unified frame) -->
-            <div class="flex h-12 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-3 shadow-card">
-              <button class="relative grid h-9 w-9 place-items-center rounded-full text-ink-600 hover:bg-ink-100">
-                <svg viewBox="0 0 24 24" class="icon"><path d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg>
-                <span class="absolute -right-0.5 -top-0.5 grid h-5 min-w-[20px] place-items-center rounded-full bg-brand-600 px-1 text-[10px] font-bold text-white ring-2 ring-white">2</span>
-              </button>
-              <button class="relative grid h-9 w-9 place-items-center rounded-full text-ink-600 hover:bg-ink-100">
-                <svg viewBox="0 0 24 24" class="icon"><path d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"/></svg>
-                <span class="absolute right-1 top-1 h-2.5 w-2.5 rounded-full bg-brand-600 ring-2 ring-white"></span>
-              </button>
-              <a href="profile.html" class="flex items-center gap-2 rounded-full hover:bg-ink-100 pl-0.5 pr-2 py-0.5">
-                <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-9 w-9 rounded-full object-cover" alt="" />
-                <svg viewBox="0 0 24 24" class="icon-sm text-ink-500"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
-              </a>
             </div>
           </header>
 
@@ -272,7 +268,7 @@
                       <div class="mt-0.5 text-[12.5px] text-ink-500">Physics Teacher · Greenfield Academy, Bangalore</div>
                       <div class="mt-0.5 text-[12px] text-ink-400">Connected 2 days ago</div>
                     </div>
-                    <button class="rounded-full border border-ink-200 bg-white px-4 py-1.5 text-[12.5px] font-semibold text-brand-600 hover:bg-brand-50">Message</button>
+                    <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-[13px] font-semibold text-brand-600 transition-colors hover:bg-brand-50">Message</button>
                     <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
                       <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
                     </button>
@@ -288,7 +284,7 @@
                       <div class="mt-0.5 text-[12.5px] text-ink-500">Mathematics Teacher · St. Xavier's School, Mumbai</div>
                       <div class="mt-0.5 text-[12px] text-ink-400">Connected 5 days ago</div>
                     </div>
-                    <button class="rounded-full border border-ink-200 bg-white px-4 py-1.5 text-[12.5px] font-semibold text-brand-600 hover:bg-brand-50">Message</button>
+                    <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-[13px] font-semibold text-brand-600 transition-colors hover:bg-brand-50">Message</button>
                     <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
                       <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
                     </button>
@@ -304,7 +300,7 @@
                       <div class="mt-0.5 text-[12.5px] text-ink-500">Chemistry Teacher · Bright Horizons School, Pune</div>
                       <div class="mt-0.5 text-[12px] text-ink-400">Connected 1 week ago</div>
                     </div>
-                    <button class="rounded-full border border-ink-200 bg-white px-4 py-1.5 text-[12.5px] font-semibold text-brand-600 hover:bg-brand-50">Message</button>
+                    <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-[13px] font-semibold text-brand-600 transition-colors hover:bg-brand-50">Message</button>
                     <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
                       <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
                     </button>
@@ -320,7 +316,7 @@
                       <div class="mt-0.5 text-[12.5px] text-ink-500">Biology Teacher · Scholars International School, Hyderabad</div>
                       <div class="mt-0.5 text-[12px] text-ink-400">Connected 1 week ago</div>
                     </div>
-                    <button class="rounded-full border border-ink-200 bg-white px-4 py-1.5 text-[12.5px] font-semibold text-brand-600 hover:bg-brand-50">Message</button>
+                    <button class="inline-flex items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-4 py-2 text-[13px] font-semibold text-brand-600 transition-colors hover:bg-brand-50">Message</button>
                     <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
                       <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
                     </button>
@@ -362,7 +358,7 @@
                         </div>
                         <span class="text-[11.5px] text-ink-500">12 mutual connections</span>
                       </div>
-                      <button class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-600 py-3 text-[14px] font-semibold text-white shadow-[0_8px_20px_-6px_rgba(59,91,254,0.45)] transition hover:bg-brand-700 hover:shadow-[0_12px_28px_-6px_rgba(59,91,254,0.55)]">
+                      <button class="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brand-700">
                         <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 5v14M5 12h14"/></svg>
                         Connect
                       </button>
@@ -391,7 +387,7 @@
                         </div>
                         <span class="text-[11.5px] text-ink-500">8 mutual connections</span>
                       </div>
-                      <button class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-600 py-3 text-[14px] font-semibold text-white shadow-[0_8px_20px_-6px_rgba(59,91,254,0.45)] transition hover:bg-brand-700 hover:shadow-[0_12px_28px_-6px_rgba(59,91,254,0.55)]">
+                      <button class="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brand-700">
                         <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 5v14M5 12h14"/></svg>
                         Connect
                       </button>
@@ -420,7 +416,7 @@
                         </div>
                         <span class="text-[11.5px] text-ink-500">6 mutual connections</span>
                       </div>
-                      <button class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-600 py-3 text-[14px] font-semibold text-white shadow-[0_8px_20px_-6px_rgba(59,91,254,0.45)] transition hover:bg-brand-700 hover:shadow-[0_12px_28px_-6px_rgba(59,91,254,0.55)]">
+                      <button class="mt-5 flex w-full items-center justify-center gap-2 rounded-xl bg-brand-600 px-4 py-2 text-[13px] font-semibold text-white transition-colors hover:bg-brand-700">
                         <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 5v14M5 12h14"/></svg>
                         Connect
                       </button>
@@ -439,8 +435,8 @@
                 </header>
                 <ul class="space-y-4">
                   <li class="flex items-start gap-3">
-                    <div class="h-11 w-11 flex-shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-violet-400 to-indigo-500">
-                      <svg viewBox="0 0 24 24" class="h-full w-full p-2 text-white" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 1 4 4v1.5a4 4 0 0 1-1.2 2.85L13.5 12.5V15h-3v-2.5L9.2 11.35A4 4 0 0 1 8 8.5V7a4 4 0 0 1 4-4Z"/><path d="M10 17.5h4M11 20h2"/></svg>
+                    <div class="grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-violet-100 to-indigo-50 ring-1 ring-violet-200/60 shadow-[0_2px_8px_-2px_rgba(139,92,246,0.28)]">
+                      <svg viewBox="0 0 24 24" class="h-5 w-5 text-violet-600" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 1 4 4v1.5a4 4 0 0 1-1.2 2.85L13.5 12.5V15h-3v-2.5L9.2 11.35A4 4 0 0 1 8 8.5V7a4 4 0 0 1 4-4Z"/><path d="M10 17.5h4M11 20h2"/></svg>
                     </div>
                     <div class="min-w-0 flex-1">
                       <div class="truncate text-[13.5px] font-semibold text-ink-900">AI tools for personalized learning</div>
@@ -452,8 +448,8 @@
                     </div>
                   </li>
                   <li class="flex items-start gap-3">
-                    <div class="h-11 w-11 flex-shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-sky-400 to-blue-500">
-                      <svg viewBox="0 0 24 24" class="h-full w-full p-2 text-white" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M3 9h18M7 13h3M14 13h3"/></svg>
+                    <div class="grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-sky-100 to-blue-50 ring-1 ring-sky-200/60 shadow-[0_2px_8px_-2px_rgba(14,165,233,0.28)]">
+                      <svg viewBox="0 0 24 24" class="h-5 w-5 text-sky-600" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M3 9h18M7 13h3M14 13h3"/></svg>
                     </div>
                     <div class="min-w-0 flex-1">
                       <div class="truncate text-[13.5px] font-semibold text-ink-900">Classroom management strategies</div>
@@ -465,8 +461,8 @@
                     </div>
                   </li>
                   <li class="flex items-start gap-3">
-                    <div class="h-11 w-11 flex-shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-rose-400 to-orange-500">
-                      <svg viewBox="0 0 24 24" class="h-full w-full p-2 text-white" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 20V10M10 20V5M14 20V8M18 20V13"/></svg>
+                    <div class="grid h-11 w-11 flex-shrink-0 place-items-center rounded-xl bg-gradient-to-br from-rose-100 to-orange-50 ring-1 ring-rose-200/60 shadow-[0_2px_8px_-2px_rgba(244,63,94,0.28)]">
+                      <svg viewBox="0 0 24 24" class="h-5 w-5 text-rose-600" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 20V10M10 20V5M14 20V8M18 20V13"/></svg>
                     </div>
                     <div class="min-w-0 flex-1">
                       <div class="truncate text-[13.5px] font-semibold text-ink-900">Integrating STEM in curriculum</div>
