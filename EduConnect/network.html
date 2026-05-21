@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EduConnect — Network</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+            colors: {
+              brand: {
+                50: '#EEF2FF',
+                100: '#E0E7FF',
+                200: '#C7D2FE',
+                500: '#5B6CFF',
+                600: '#3B5BFE',
+                700: '#2E48E0',
+              },
+              ink: {
+                900: '#0F172A',
+                700: '#334155',
+                600: '#475569',
+                500: '#64748B',
+                400: '#94A3B8',
+                300: '#CBD5E1',
+                200: '#E2E8F0',
+                100: '#F1F5F9',
+              },
+              page: '#F5F6F8',
+            },
+            boxShadow: {
+              card: '0 1px 2px rgba(15,23,42,0.04), 0 1px 1px rgba(15,23,42,0.03)',
+              soft: '0 4px 14px rgba(15,23,42,0.05)',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html,
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        background: #F5F6F8;
+        color: #0F172A;
+        -webkit-font-smoothing: antialiased;
+      }
+      .icon {
+        width: 20px;
+        height: 20px;
+        stroke: currentColor;
+        stroke-width: 1.75;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .icon-sm {
+        width: 16px;
+        height: 16px;
+        stroke: currentColor;
+        stroke-width: 1.75;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .icon-xs {
+        width: 14px;
+        height: 14px;
+        stroke: currentColor;
+        stroke-width: 1.75;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <div class="mx-auto max-w-[1440px] px-6 py-5">
+      <div class="flex items-start gap-6">
+        <!-- ============ LEFT SIDEBAR ============ -->
+        <aside class="w-[248px] flex-shrink-0 sticky top-5">
+          <!-- Logo -->
+          <div class="flex items-center gap-3 px-2 pb-5">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-brand-600 to-brand-700 shadow-soft">
+              <svg viewBox="0 0 24 24" class="h-5 w-5 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15.5H5.5A1.5 1.5 0 0 1 4 18V5.5Z" fill="white" stroke="none" />
+                <path d="M13 4h5.5A1.5 1.5 0 0 1 20 5.5V18a1.5 1.5 0 0 1-1.5 1.5H13V4Z" fill="white" fill-opacity="0.55" stroke="none" />
+              </svg>
+            </div>
+            <div class="leading-tight">
+              <div class="text-[18px] font-bold tracking-tight text-ink-900">EduConnect</div>
+              <div class="text-[11px] font-medium text-brand-600">Empowering Educators</div>
+            </div>
+          </div>
+
+          <!-- Primary nav -->
+          <nav class="space-y-1 px-1">
+            <!-- Home -->
+            <a href="index.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M3.5 11.5 12 4l8.5 7.5"/><path d="M5.5 10v9.5a.5.5 0 0 0 .5.5h4v-6h4v6h4a.5.5 0 0 0 .5-.5V10"/></svg>
+              <span class="text-[14px] font-medium">Home</span>
+            </a>
+            <!-- Network (active) -->
+            <a href="#" class="flex items-center gap-3 rounded-xl bg-brand-50 px-3 py-2.5 text-brand-700 ring-1 ring-brand-100">
+              <svg viewBox="0 0 24 24" class="icon"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><path d="M6.7 7.3 10.5 10.8M17.3 7.3 13.6 10.8M6.7 16.7 10.5 13.2M17.3 16.7 13.6 13.2"/></svg>
+              <span class="text-[14px] font-semibold">Network</span>
+            </a>
+            <!-- Communities -->
+            <a href="communities.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="8" r="2.25"/><path d="M2.5 19c.4-2.8 2.6-4.5 5.5-4.5s5.1 1.7 5.5 4.5"/><path d="M15 14c2.4 0 4.3 1.4 4.8 3.5"/></svg>
+              <span class="text-[14px] font-medium">Communities</span>
+            </a>
+            <!-- Messages -->
+            <a href="messages.html" class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <span class="flex items-center gap-3">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 14.5v-8Z"/></svg>
+                <span class="text-[14px] font-medium">Messages</span>
+              </span>
+              <span class="grid h-5 min-w-[20px] place-items-center rounded-full bg-brand-600 px-1.5 text-[11px] font-semibold text-white">2</span>
+            </a>
+            <!-- Resources -->
+            <a href="resources.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M3.5 7A1.5 1.5 0 0 1 5 5.5h4l2 2h8A1.5 1.5 0 0 1 20.5 9v8.5A1.5 1.5 0 0 1 19 19H5a1.5 1.5 0 0 1-1.5-1.5V7Z"/></svg>
+              <span class="text-[14px] font-medium">Resources</span>
+            </a>
+            <!-- Events -->
+            <a href="events.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><rect x="3.5" y="5.5" width="17" height="14" rx="2.5"/><path d="M3.5 10h17M8 3.5v4M16 3.5v4"/></svg>
+              <span class="text-[14px] font-medium">Events</span>
+            </a>
+            <!-- Jobs -->
+            <a href="jobs.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><rect x="3.5" y="7" width="17" height="12.5" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3.5 12.5h17"/></svg>
+              <span class="text-[14px] font-medium">Jobs</span>
+            </a>
+          </nav>
+
+          <!-- Divider -->
+          <div class="my-5 border-t border-ink-200/70"></div>
+
+          <!-- Shortcuts -->
+          <div class="px-3 pb-2 text-[11px] font-semibold uppercase tracking-wider text-brand-600">Shortcuts</div>
+          <nav class="space-y-1 px-1">
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M6.5 4.5h11v15l-5.5-3.5L6.5 19.5v-15Z"/></svg>
+              <span class="text-[14px] font-medium">Saved Posts</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M6 4.5h7.5L18.5 9v10a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5v-14a.5.5 0 0 1 .5-.5Z"/><path d="M13.5 4.5V9h5"/></svg>
+              <span class="text-[14px] font-medium">My Resources</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
+              <span class="text-[14px] font-medium">Teaching Templates</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+              <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>
+              <span class="text-[14px] font-medium">Recent Files</span>
+            </a>
+          </nav>
+
+          <!-- Bottom utility menu -->
+          <div class="mt-6 border-t border-ink-200/70 pt-3">
+            <nav class="space-y-1 px-1">
+              <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span class="text-[14px] font-medium">Settings</span>
+              </a>
+              <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="8.5"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 .9-1 1.7"/><circle cx="12" cy="16.5" r="0.6" fill="currentColor" stroke="none"/></svg>
+                <span class="text-[14px] font-medium">Help & Support</span>
+              </a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- ============ CENTER + RIGHT WRAPPER ============ -->
+        <div class="flex min-w-0 flex-1 flex-col gap-5">
+          <!-- ===== TOP NAVBAR ===== -->
+          <header class="sticky top-5 z-20 -mb-5 flex items-center gap-5 bg-page pb-5">
+            <!-- Search -->
+            <div class="flex h-12 flex-1 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-4 shadow-card">
+              <svg viewBox="0 0 24 24" class="icon text-ink-400"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-3.5-3.5"/></svg>
+              <input
+                type="text"
+                placeholder="Search teachers, topics, resources…"
+                class="flex-1 bg-transparent text-[14px] text-ink-600 placeholder:text-ink-400 focus:outline-none"
+              />
+              <div class="flex h-7 items-center gap-1 rounded-md border border-ink-200 bg-ink-100/60 px-2 text-[11px] font-semibold text-ink-500">
+                <span>⌘</span><span>K</span>
+              </div>
+            </div>
+
+            <!-- Right cluster (unified frame) -->
+            <div class="flex h-12 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-3 shadow-card">
+              <button class="relative grid h-9 w-9 place-items-center rounded-full text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 14.5v-8Z"/></svg>
+                <span class="absolute -right-0.5 -top-0.5 grid h-5 min-w-[20px] place-items-center rounded-full bg-brand-600 px-1 text-[10px] font-bold text-white ring-2 ring-white">2</span>
+              </button>
+              <button class="relative grid h-9 w-9 place-items-center rounded-full text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15L6 16Z"/><path d="M10 19.5a2 2 0 0 0 4 0"/></svg>
+                <span class="absolute right-1 top-1 h-2.5 w-2.5 rounded-full bg-brand-600 ring-2 ring-white"></span>
+              </button>
+              <a href="profile.html" class="flex items-center gap-2 rounded-full hover:bg-ink-100 pl-0.5 pr-2 py-0.5">
+                <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-9 w-9 rounded-full object-cover" alt="" />
+                <svg viewBox="0 0 24 24" class="icon-sm text-ink-500"><path d="m6 9 6 6 6-6"/></svg>
+              </a>
+            </div>
+          </header>
+
+          <!-- ===== MAIN 2-COL ===== -->
+          <div class="grid grid-cols-[1fr_340px] gap-6">
+            <!-- =========== CENTER =========== -->
+            <main class="space-y-6 min-w-0">
+              <!-- Page header -->
+              <div>
+                <h1 class="text-[28px] font-bold tracking-tight text-ink-900">Network</h1>
+                <p class="mt-1 text-[14px] font-medium text-brand-600">Connect with educators and grow your professional network.</p>
+              </div>
+
+              <!-- Tabs -->
+              <section class="flex items-center gap-6 border-b border-ink-200/70 px-1">
+                <button class="relative inline-flex items-center gap-2 px-1 py-3 text-[14px] font-semibold text-brand-600">
+                  All
+                  <span class="grid h-5 min-w-[26px] place-items-center rounded-full bg-brand-600 px-1.5 text-[11px] font-semibold text-white">126</span>
+                  <span class="absolute inset-x-0 -bottom-[1px] h-[3px] rounded-t bg-brand-600"></span>
+                </button>
+                <button class="inline-flex items-center gap-2 px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">
+                  Requests
+                  <span class="grid h-5 min-w-[22px] place-items-center rounded-full bg-brand-600 px-1.5 text-[11px] font-semibold text-white">3</span>
+                </button>
+                <button class="px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">Followers</button>
+                <button class="px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">Suggestions</button>
+                <button class="px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">Find People</button>
+              </section>
+
+              <!-- Filter search -->
+              <section class="flex h-12 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-4 shadow-card">
+                <svg viewBox="0 0 24 24" class="icon text-ink-400"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-3.5-3.5"/></svg>
+                <input
+                  type="text"
+                  placeholder="Search by name, subject, school or location…"
+                  class="flex-1 bg-transparent text-[14px] text-ink-600 placeholder:text-ink-400 focus:outline-none"
+                />
+              </section>
+
+              <!-- Your connections -->
+              <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <header class="mb-4 flex items-center justify-between">
+                  <h3 class="text-[15px] font-semibold text-ink-900">Your connections</h3>
+                  <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
+                    <svg viewBox="0 0 24 24" class="icon"><path d="M3 5.5h18M6 12h12M10 18.5h4"/></svg>
+                  </button>
+                </header>
+                <ul class="divide-y divide-ink-100">
+                  <!-- Maya Reyes -->
+                  <li class="flex items-center gap-4 py-3.5">
+                    <a href="view-profile.html"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&h=120&fit=crop&crop=faces" class="h-12 w-12 rounded-full object-cover transition hover:opacity-90" alt="" /></a>
+                    <div class="min-w-0 flex-1">
+                      <div class="flex flex-wrap items-center gap-2">
+                        <a href="view-profile.html" class="text-[14px] font-semibold text-ink-900 hover:underline">Maya Reyes</a>
+                        <span class="rounded-md bg-violet-100 px-2 py-0.5 text-[11px] font-semibold text-violet-700">Teacher</span>
+                      </div>
+                      <div class="mt-0.5 text-[12.5px] text-ink-500">Physics Teacher · Greenfield Academy, Bangalore</div>
+                      <div class="mt-0.5 text-[12px] text-ink-400">Connected 2 days ago</div>
+                    </div>
+                    <button class="rounded-full border border-ink-200 bg-white px-4 py-1.5 text-[12.5px] font-semibold text-brand-600 hover:bg-brand-50">Message</button>
+                    <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
+                      <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                    </button>
+                  </li>
+                  <!-- Daniel Okafor -->
+                  <li class="flex items-center gap-4 py-3.5">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&h=120&fit=crop&crop=faces" class="h-12 w-12 rounded-full object-cover" alt="" />
+                    <div class="min-w-0 flex-1">
+                      <div class="flex flex-wrap items-center gap-2">
+                        <span class="text-[14px] font-semibold text-ink-900">Daniel Okafor</span>
+                        <span class="rounded-md bg-emerald-100 px-2 py-0.5 text-[11px] font-semibold text-emerald-700">Math Teacher</span>
+                      </div>
+                      <div class="mt-0.5 text-[12.5px] text-ink-500">Mathematics Teacher · St. Xavier's School, Mumbai</div>
+                      <div class="mt-0.5 text-[12px] text-ink-400">Connected 5 days ago</div>
+                    </div>
+                    <button class="rounded-full border border-ink-200 bg-white px-4 py-1.5 text-[12.5px] font-semibold text-brand-600 hover:bg-brand-50">Message</button>
+                    <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
+                      <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                    </button>
+                  </li>
+                  <!-- Neha Iyer -->
+                  <li class="flex items-center gap-4 py-3.5">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120&h=120&fit=crop&crop=faces" class="h-12 w-12 rounded-full object-cover" alt="" />
+                    <div class="min-w-0 flex-1">
+                      <div class="flex flex-wrap items-center gap-2">
+                        <span class="text-[14px] font-semibold text-ink-900">Neha Iyer</span>
+                        <span class="rounded-md bg-violet-100 px-2 py-0.5 text-[11px] font-semibold text-violet-700">Chemistry Teacher</span>
+                      </div>
+                      <div class="mt-0.5 text-[12.5px] text-ink-500">Chemistry Teacher · Bright Horizons School, Pune</div>
+                      <div class="mt-0.5 text-[12px] text-ink-400">Connected 1 week ago</div>
+                    </div>
+                    <button class="rounded-full border border-ink-200 bg-white px-4 py-1.5 text-[12.5px] font-semibold text-brand-600 hover:bg-brand-50">Message</button>
+                    <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
+                      <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                    </button>
+                  </li>
+                  <!-- Amit Patel -->
+                  <li class="flex items-center gap-4 py-3.5">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=120&h=120&fit=crop&crop=faces" class="h-12 w-12 rounded-full object-cover" alt="" />
+                    <div class="min-w-0 flex-1">
+                      <div class="flex flex-wrap items-center gap-2">
+                        <span class="text-[14px] font-semibold text-ink-900">Amit Patel</span>
+                        <span class="rounded-md bg-sky-100 px-2 py-0.5 text-[11px] font-semibold text-sky-700">Biology Teacher</span>
+                      </div>
+                      <div class="mt-0.5 text-[12.5px] text-ink-500">Biology Teacher · Scholars International School, Hyderabad</div>
+                      <div class="mt-0.5 text-[12px] text-ink-400">Connected 1 week ago</div>
+                    </div>
+                    <button class="rounded-full border border-ink-200 bg-white px-4 py-1.5 text-[12.5px] font-semibold text-brand-600 hover:bg-brand-50">Message</button>
+                    <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
+                      <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                    </button>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- People you may know -->
+              <section>
+                <header class="mb-4 flex items-center justify-between">
+                  <h3 class="text-[15px] font-semibold text-ink-900">People you may know</h3>
+                  <a href="#" class="inline-flex items-center gap-1 text-[12.5px] font-semibold text-brand-600 hover:text-brand-700">View all
+                    <svg viewBox="0 0 24 24" class="icon-xs"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  </a>
+                </header>
+                <div class="grid grid-cols-3 gap-5">
+                  <!-- Card 1 — Ananya / Math (violet) -->
+                  <div class="group relative overflow-hidden rounded-3xl border border-ink-200/70 bg-white shadow-card transition duration-200 hover:-translate-y-0.5 hover:shadow-soft">
+                    <!-- Subtle subject-tinted top fade -->
+                    <div class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-violet-50/80 to-white"></div>
+                    <!-- 3-dot menu -->
+                    <button class="absolute right-3 top-3 z-10 grid h-7 w-7 place-items-center rounded-full text-ink-400 transition hover:bg-ink-100 hover:text-ink-700">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                    </button>
+                    <!-- Content -->
+                    <div class="relative flex flex-col items-center px-6 pb-7 pt-9">
+                      <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=faces" class="h-20 w-20 rounded-full object-cover ring-4 ring-white shadow-[0_10px_24px_-8px_rgba(15,23,42,0.22)]" alt="" />
+                      <h4 class="mt-4 text-[16.5px] font-semibold tracking-tight text-ink-900">Ananya Sharma</h4>
+                      <span class="mt-2 inline-flex items-center gap-1.5 rounded-full bg-violet-50 px-2 py-[3px] text-[10.5px] font-semibold text-violet-700">
+                        <span class="h-1 w-1 rounded-full bg-violet-500"></span>
+                        Math Teacher
+                      </span>
+                      <div class="mt-1.5 text-[12px] text-ink-400">St. Xavier's School</div>
+                      <div class="mt-5 flex items-center gap-2">
+                        <div class="flex -space-x-1.5">
+                          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop&crop=faces" class="h-[18px] w-[18px] rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=faces" class="h-[18px] w-[18px] rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=40&h=40&fit=crop&crop=faces" class="h-[18px] w-[18px] rounded-full ring-2 ring-white object-cover" alt="" />
+                        </div>
+                        <span class="text-[11.5px] text-ink-500">12 mutual connections</span>
+                      </div>
+                      <button class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-600 py-3 text-[14px] font-semibold text-white shadow-[0_8px_20px_-6px_rgba(59,91,254,0.45)] transition hover:bg-brand-700 hover:shadow-[0_12px_28px_-6px_rgba(59,91,254,0.55)]">
+                        <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 5v14M5 12h14"/></svg>
+                        Connect
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Card 2 — Rahul / Science (emerald) -->
+                  <div class="group relative overflow-hidden rounded-3xl border border-ink-200/70 bg-white shadow-card transition duration-200 hover:-translate-y-0.5 hover:shadow-soft">
+                    <div class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-emerald-50/80 to-white"></div>
+                    <button class="absolute right-3 top-3 z-10 grid h-7 w-7 place-items-center rounded-full text-ink-400 transition hover:bg-ink-100 hover:text-ink-700">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                    </button>
+                    <div class="relative flex flex-col items-center px-6 pb-7 pt-9">
+                      <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=200&h=200&fit=crop&crop=faces" class="h-20 w-20 rounded-full object-cover ring-4 ring-white shadow-[0_10px_24px_-8px_rgba(15,23,42,0.22)]" alt="" />
+                      <h4 class="mt-4 text-[16.5px] font-semibold tracking-tight text-ink-900">Rahul Mehta</h4>
+                      <span class="mt-2 inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2 py-[3px] text-[10.5px] font-semibold text-emerald-700">
+                        <span class="h-1 w-1 rounded-full bg-emerald-500"></span>
+                        Science Teacher
+                      </span>
+                      <div class="mt-1.5 text-[12px] text-ink-400">Bright Horizons School</div>
+                      <div class="mt-5 flex items-center gap-2">
+                        <div class="flex -space-x-1.5">
+                          <img src="https://images.unsplash.com/photo-1521119989659-a83eee488004?w=40&h=40&fit=crop&crop=faces" class="h-[18px] w-[18px] rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1545996124-0501ebae84d0?w=40&h=40&fit=crop&crop=faces" class="h-[18px] w-[18px] rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=40&h=40&fit=crop&crop=faces" class="h-[18px] w-[18px] rounded-full ring-2 ring-white object-cover" alt="" />
+                        </div>
+                        <span class="text-[11.5px] text-ink-500">8 mutual connections</span>
+                      </div>
+                      <button class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-600 py-3 text-[14px] font-semibold text-white shadow-[0_8px_20px_-6px_rgba(59,91,254,0.45)] transition hover:bg-brand-700 hover:shadow-[0_12px_28px_-6px_rgba(59,91,254,0.55)]">
+                        <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 5v14M5 12h14"/></svg>
+                        Connect
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Card 3 — Arjun / Physics (sky) -->
+                  <div class="group relative overflow-hidden rounded-3xl border border-ink-200/70 bg-white shadow-card transition duration-200 hover:-translate-y-0.5 hover:shadow-soft">
+                    <div class="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-sky-50/80 to-white"></div>
+                    <button class="absolute right-3 top-3 z-10 grid h-7 w-7 place-items-center rounded-full text-ink-400 transition hover:bg-ink-100 hover:text-ink-700">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+                    </button>
+                    <div class="relative flex flex-col items-center px-6 pb-7 pt-9">
+                      <img src="https://images.unsplash.com/photo-1546961342-c0ee2627ee59?w=200&h=200&fit=crop&crop=faces" class="h-20 w-20 rounded-full object-cover ring-4 ring-white shadow-[0_10px_24px_-8px_rgba(15,23,42,0.22)]" alt="" />
+                      <h4 class="mt-4 text-[16.5px] font-semibold tracking-tight text-ink-900">Arjun Verma</h4>
+                      <span class="mt-2 inline-flex items-center gap-1.5 rounded-full bg-sky-50 px-2 py-[3px] text-[10.5px] font-semibold text-sky-700">
+                        <span class="h-1 w-1 rounded-full bg-sky-500"></span>
+                        Physics Teacher
+                      </span>
+                      <div class="mt-1.5 text-[12px] text-ink-400">Greenfield Academy</div>
+                      <div class="mt-5 flex items-center gap-2">
+                        <div class="flex -space-x-1.5">
+                          <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=40&h=40&fit=crop&crop=faces" class="h-[18px] w-[18px] rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=faces" class="h-[18px] w-[18px] rounded-full ring-2 ring-white object-cover" alt="" />
+                          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=40&h=40&fit=crop&crop=faces" class="h-[18px] w-[18px] rounded-full ring-2 ring-white object-cover" alt="" />
+                        </div>
+                        <span class="text-[11.5px] text-ink-500">6 mutual connections</span>
+                      </div>
+                      <button class="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-2xl bg-brand-600 py-3 text-[14px] font-semibold text-white shadow-[0_8px_20px_-6px_rgba(59,91,254,0.45)] transition hover:bg-brand-700 hover:shadow-[0_12px_28px_-6px_rgba(59,91,254,0.55)]">
+                        <svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 5v14M5 12h14"/></svg>
+                        Connect
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </main>
+
+            <!-- =========== RIGHT SIDEBAR =========== -->
+            <aside class="space-y-5 self-start sticky top-[88px]">
+              <!-- Trending in your network -->
+              <section class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+                <header class="mb-4">
+                  <h3 class="text-[14.5px] font-semibold text-ink-900">Trending in your network</h3>
+                </header>
+                <ul class="space-y-4">
+                  <li class="flex items-start gap-3">
+                    <div class="h-11 w-11 flex-shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-violet-400 to-indigo-500">
+                      <svg viewBox="0 0 24 24" class="h-full w-full p-2 text-white" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 0 1 4 4v1.5a4 4 0 0 1-1.2 2.85L13.5 12.5V15h-3v-2.5L9.2 11.35A4 4 0 0 1 8 8.5V7a4 4 0 0 1 4-4Z"/><path d="M10 17.5h4M11 20h2"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-[13.5px] font-semibold text-ink-900">AI tools for personalized learning</div>
+                      <div class="mt-0.5 text-[12px] text-ink-500">Rohit Sharma and 24 others posted</div>
+                    </div>
+                    <div class="inline-flex items-center gap-0.5 text-[12px] font-semibold text-emerald-600">
+                      <svg viewBox="0 0 24 24" class="icon-xs"><path d="m6 14 5-5 3 3 5-6"/><path d="M14 6h5v5"/></svg>
+                      12%
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="h-11 w-11 flex-shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-sky-400 to-blue-500">
+                      <svg viewBox="0 0 24 24" class="h-full w-full p-2 text-white" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M3 9h18M7 13h3M14 13h3"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-[13.5px] font-semibold text-ink-900">Classroom management strategies</div>
+                      <div class="mt-0.5 text-[12px] text-ink-500">Neha Iyer and 18 others posted</div>
+                    </div>
+                    <div class="inline-flex items-center gap-0.5 text-[12px] font-semibold text-emerald-600">
+                      <svg viewBox="0 0 24 24" class="icon-xs"><path d="m6 14 5-5 3 3 5-6"/><path d="M14 6h5v5"/></svg>
+                      8%
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div class="h-11 w-11 flex-shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-rose-400 to-orange-500">
+                      <svg viewBox="0 0 24 24" class="h-full w-full p-2 text-white" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18M6 20V10M10 20V5M14 20V8M18 20V13"/></svg>
+                    </div>
+                    <div class="min-w-0 flex-1">
+                      <div class="truncate text-[13.5px] font-semibold text-ink-900">Integrating STEM in curriculum</div>
+                      <div class="mt-0.5 text-[12px] text-ink-500">Arjun Verma and 15 others posted</div>
+                    </div>
+                    <div class="inline-flex items-center gap-0.5 text-[12px] font-semibold text-emerald-600">
+                      <svg viewBox="0 0 24 24" class="icon-xs"><path d="m6 14 5-5 3 3 5-6"/><path d="M14 6h5v5"/></svg>
+                      6%
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+              <!-- Popular Topics -->
+              <section class="rounded-[20px] border border-ink-200/70 bg-white p-6 shadow-card">
+                <h3 class="mb-2 text-[16px] font-bold tracking-tight text-ink-900">Popular Topics</h3>
+                <ul class="divide-y divide-ink-100">
+                  <li class="flex items-center justify-between py-3.5">
+                    <a href="#" class="text-[13.5px] font-medium text-brand-600 hover:underline"># STEM Education</a>
+                    <span class="text-[12px] text-ink-500">9.8K posts</span>
+                  </li>
+                  <li class="flex items-center justify-between py-3.5">
+                    <a href="#" class="text-[13.5px] font-medium text-brand-600 hover:underline"># Classroom Management</a>
+                    <span class="text-[12px] text-ink-500">9.8K posts</span>
+                  </li>
+                  <li class="flex items-center justify-between py-3.5">
+                    <a href="#" class="text-[13.5px] font-medium text-brand-600 hover:underline"># Digital Learning</a>
+                    <span class="text-[12px] text-ink-500">8.3K posts</span>
+                  </li>
+                  <li class="flex items-center justify-between py-3.5">
+                    <a href="#" class="text-[13.5px] font-medium text-brand-600 hover:underline"># Teacher Resources</a>
+                    <span class="text-[12px] text-ink-500">7.1K posts</span>
+                  </li>
+                  <li class="flex items-center justify-between py-3.5">
+                    <a href="#" class="text-[13.5px] font-medium text-brand-600 hover:underline"># Student Engagement</a>
+                    <span class="text-[12px] text-ink-500">6.9K posts</span>
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

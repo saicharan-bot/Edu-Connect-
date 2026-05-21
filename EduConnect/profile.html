@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EduConnect — Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = { theme: { extend: {
+        fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+        colors: {
+          brand: { 50:'#EEF2FF',100:'#E0E7FF',200:'#C7D2FE',500:'#5B6CFF',600:'#3B5BFE',700:'#2E48E0' },
+          ink: { 900:'#0F172A',700:'#334155',600:'#475569',500:'#64748B',400:'#94A3B8',300:'#CBD5E1',200:'#E2E8F0',100:'#F1F5F9' },
+          page: '#F5F6F8',
+        },
+        boxShadow: { card:'0 1px 2px rgba(15,23,42,0.04), 0 1px 1px rgba(15,23,42,0.03)', soft:'0 4px 14px rgba(15,23,42,0.05)' },
+      } } };
+    </script>
+    <style>
+      html,body{font-family:'Inter',system-ui,sans-serif;background:#F5F6F8;color:#0F172A;-webkit-font-smoothing:antialiased}
+      .icon{width:20px;height:20px;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .icon-sm{width:16px;height:16px;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
+      .icon-xs{width:14px;height:14px;stroke:currentColor;stroke-width:1.75;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <div class="mx-auto max-w-[1440px] px-6 py-5">
+      <div class="flex items-start gap-6">
+        <!-- =================== SIDEBAR =================== -->
+        <aside class="w-[248px] flex-shrink-0 sticky top-5">
+          <div class="flex items-center gap-3 px-2 pb-5">
+            <div class="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-brand-600 to-brand-700 shadow-soft"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15.5H5.5A1.5 1.5 0 0 1 4 18V5.5Z" fill="white"/><path d="M13 4h5.5A1.5 1.5 0 0 1 20 5.5V18a1.5 1.5 0 0 1-1.5 1.5H13V4Z" fill="white" fill-opacity="0.55"/></svg></div>
+            <div class="leading-tight"><div class="text-[18px] font-bold tracking-tight text-ink-900">EduConnect</div><div class="text-[11px] font-medium text-brand-600">Empowering Educators</div></div>
+          </div>
+          <nav class="space-y-1 px-1">
+            <a href="index.html" class="flex items-center gap-3 rounded-xl bg-brand-50 px-3 py-2.5 text-brand-700 ring-1 ring-brand-100"><svg viewBox="0 0 24 24" class="icon"><path d="M3.5 11.5 12 4l8.5 7.5"/><path d="M5.5 10v9.5a.5.5 0 0 0 .5.5h4v-6h4v6h4a.5.5 0 0 0 .5-.5V10"/></svg><span class="text-[14px] font-semibold">Home</span></a>
+            <a href="network.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><circle cx="5" cy="6" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="5" cy="18" r="2"/><circle cx="19" cy="18" r="2"/><circle cx="12" cy="12" r="2"/><path d="M6.7 7.3 10.5 10.8M17.3 7.3 13.6 10.8M6.7 16.7 10.5 13.2M17.3 16.7 13.6 13.2"/></svg><span class="text-[14px] font-medium">Network</span></a>
+            <a href="communities.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><circle cx="8" cy="9" r="3"/><circle cx="17" cy="8" r="2.25"/><path d="M2.5 19c.4-2.8 2.6-4.5 5.5-4.5s5.1 1.7 5.5 4.5"/><path d="M15 14c2.4 0 4.3 1.4 4.8 3.5"/></svg><span class="text-[14px] font-medium">Communities</span></a>
+            <a href="messages.html" class="flex items-center justify-between gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><span class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="icon"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 14.5v-8Z"/></svg><span class="text-[14px] font-medium">Messages</span></span><span class="grid h-5 min-w-[20px] place-items-center rounded-full bg-brand-600 px-1.5 text-[11px] font-semibold text-white">3</span></a>
+            <a href="resources.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M3.5 7A1.5 1.5 0 0 1 5 5.5h4l2 2h8A1.5 1.5 0 0 1 20.5 9v8.5A1.5 1.5 0 0 1 19 19H5a1.5 1.5 0 0 1-1.5-1.5V7Z"/></svg><span class="text-[14px] font-medium">Resources</span></a>
+            <a href="events.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><rect x="3.5" y="5.5" width="17" height="14" rx="2.5"/><path d="M3.5 10h17M8 3.5v4M16 3.5v4"/></svg><span class="text-[14px] font-medium">Events</span></a>
+            <a href="jobs.html" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><rect x="3.5" y="7" width="17" height="12.5" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3.5 12.5h17"/></svg><span class="text-[14px] font-medium">Jobs</span></a>
+          </nav>
+          <div class="my-5 border-t border-ink-200/70"></div>
+          <div class="px-3 pb-2 text-[11px] font-semibold uppercase tracking-wider text-brand-600">Shortcuts</div>
+          <nav class="space-y-1 px-1">
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M6.5 4.5h11v15l-5.5-3.5L6.5 19.5v-15Z"/></svg><span class="text-[14px] font-medium">Saved Posts</span></a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M6 4.5h7.5L18.5 9v10a.5.5 0 0 1-.5.5H6a.5.5 0 0 1-.5-.5v-14a.5.5 0 0 1 .5-.5Z"/><path d="M13.5 4.5V9h5"/></svg><span class="text-[14px] font-medium">My Resources</span></a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg><span class="text-[14px] font-medium">Teaching Templates</span></a>
+            <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span class="text-[14px] font-medium">Recent Files</span></a>
+          </nav>
+
+          <!-- Bottom utility menu -->
+          <div class="mt-6 border-t border-ink-200/70 pt-3">
+            <nav class="space-y-1 px-1">
+              <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/><circle cx="12" cy="12" r="3"/></svg>
+                <span class="text-[14px] font-medium">Settings</span>
+              </a>
+              <a href="#" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="8.5"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.8.4-1 .9-1 1.7"/><circle cx="12" cy="16.5" r="0.6" fill="currentColor" stroke="none"/></svg>
+                <span class="text-[14px] font-medium">Help & Support</span>
+              </a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- =================== MAIN + NAVBAR =================== -->
+        <div class="flex min-w-0 flex-1 flex-col gap-5">
+          <!-- NAVBAR -->
+          <header class="sticky top-5 z-20 -mb-5 flex items-center gap-5 bg-page pb-5">
+            <div class="flex h-12 flex-1 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-4 shadow-card">
+              <svg viewBox="0 0 24 24" class="icon text-ink-400"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-3.5-3.5"/></svg>
+              <input type="text" placeholder="Search teachers, topics, resources…" class="flex-1 bg-transparent text-[14px] text-ink-600 placeholder:text-ink-400 focus:outline-none"/>
+              <div class="flex h-7 items-center gap-1 rounded-md border border-ink-200 bg-ink-100/60 px-2 text-[11px] font-semibold text-ink-500"><span>⌘</span><span>K</span></div>
+            </div>
+            <div class="flex h-12 items-center gap-3 rounded-2xl border border-ink-200/70 bg-white px-3 shadow-card">
+              <button class="relative grid h-9 w-9 place-items-center rounded-full text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 14.5v-8Z"/></svg><span class="absolute -right-0.5 -top-0.5 grid h-5 min-w-[20px] place-items-center rounded-full bg-brand-600 px-1 text-[10px] font-bold text-white ring-2 ring-white">3</span></button>
+              <button class="relative grid h-9 w-9 place-items-center rounded-full text-ink-600 hover:bg-ink-100"><svg viewBox="0 0 24 24" class="icon"><path d="M6 16V11a6 6 0 1 1 12 0v5l1.5 2h-15L6 16Z"/><path d="M10 19.5a2 2 0 0 0 4 0"/></svg><span class="absolute right-1 top-1 h-2.5 w-2.5 rounded-full bg-brand-600 ring-2 ring-white"></span></button>
+              <a href="profile.html" class="flex items-center gap-2 rounded-full hover:bg-ink-100 pl-0.5 pr-2 py-0.5"><img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-9 w-9 rounded-full object-cover" alt=""/><svg viewBox="0 0 24 24" class="icon-sm text-ink-500"><path d="m6 9 6 6 6-6"/></svg></a>
+            </div>
+          </header>
+
+          <!-- ========== PROFILE HERO ========== -->
+          <section class="overflow-hidden rounded-3xl border border-ink-200/70 bg-white shadow-card">
+            <!-- Cover banner -->
+            <div class="relative h-48 overflow-hidden bg-gradient-to-br from-brand-500 via-blue-500 to-sky-400">
+              <!-- Dot pattern left -->
+              <svg class="absolute left-6 top-6 h-20 w-32 text-white/30" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <pattern id="dot-l" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4"/></pattern>
+                <rect width="100%" height="100%" fill="url(#dot-l)"/>
+              </svg>
+              <!-- Dot pattern center -->
+              <svg class="absolute left-1/2 top-8 h-16 w-24 -translate-x-1/2 text-white/25" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                <pattern id="dot-c" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2"/></pattern>
+                <rect width="100%" height="100%" fill="url(#dot-c)"/>
+              </svg>
+              <!-- Atom -->
+              <svg class="absolute right-[28%] top-6 h-24 w-24 text-white/55" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25">
+                <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-60 12 12)"/>
+              </svg>
+              <!-- Sine wave with labels -->
+              <svg class="absolute right-[10%] top-16 h-16 w-44 text-white/55" viewBox="0 0 220 60" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+                <path d="M0 30 Q 27 0, 55 30 T 110 30 T 165 30 T 220 30"/>
+                <text x="20" y="18" fill="currentColor" stroke="none" font-style="italic" font-size="11">α</text>
+                <text x="118" y="48" fill="currentColor" stroke="none" font-style="italic" font-size="10">b</text>
+              </svg>
+              <!-- E=mc² -->
+              <div class="absolute right-8 top-10 text-white/85 italic font-light" style="font-family:'Georgia', serif;">
+                <span class="text-[28px]">E = mc</span><span class="align-super text-[16px]">2</span>
+              </div>
+              <!-- Books illustration (simple geometric) -->
+              <svg class="absolute right-3 bottom-2 h-28 w-28 text-white/40" viewBox="0 0 100 100" fill="currentColor" stroke="none">
+                <rect x="20" y="40" width="50" height="10" rx="1.5"/>
+                <rect x="25" y="50" width="50" height="10" rx="1.5" opacity="0.85"/>
+                <rect x="22" y="60" width="45" height="10" rx="1.5" opacity="0.75"/>
+                <!-- Pen cup -->
+                <rect x="72" y="55" width="14" height="20" rx="2" opacity="0.7"/>
+                <rect x="75" y="48" width="2" height="10" opacity="0.9"/>
+                <rect x="79" y="46" width="2" height="12" opacity="0.85"/>
+                <rect x="83" y="50" width="2" height="8" opacity="0.8"/>
+              </svg>
+              <!-- soft glow -->
+              <div class="absolute inset-0 bg-gradient-to-t from-white/0 via-white/0 to-white/10"></div>
+            </div>
+
+            <!-- Profile content -->
+            <div class="relative px-7 pb-6">
+              <!-- Avatar -->
+              <div class="absolute -top-16 left-7">
+                <div class="relative">
+                  <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=320&h=320&fit=crop&crop=faces" class="h-32 w-32 rounded-full object-cover ring-4 ring-white shadow-soft" alt="" />
+                  <span class="absolute right-2 bottom-2 grid h-7 w-7 place-items-center rounded-full bg-brand-600 ring-4 ring-white">
+                    <svg viewBox="0 0 24 24" class="h-3.5 w-3.5 text-white" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 4 4 10-10"/></svg>
+                  </span>
+                </div>
+              </div>
+
+              <!-- Header row: identity (left) + stats/buttons (right) -->
+              <div class="grid grid-cols-[1fr_440px] gap-6 pt-4">
+                <!-- Identity -->
+                <div class="pl-40">
+                  <div class="flex items-center gap-2">
+                    <h1 class="text-[26px] font-bold tracking-tight text-ink-900">Sadrush Anand</h1>
+                    <svg viewBox="0 0 24 24" class="h-5 w-5 text-brand-600" fill="currentColor"><path d="M12 2 14 4l2.8-.6 1.1 2.6 2.6 1.1L20 9.8 22 12l-2 2.2.5 2.7-2.6 1.1-1.1 2.6L14 20l-2 2-2-2-2.7.6-1.1-2.6-2.6-1.1L4 14.2 2 12l2-2.2L3.5 7.1l2.6-1.1L7.2 3.4 10 4l2-2Z"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                  </div>
+                  <div class="mt-1 text-[14px] text-ink-500">@physicswithsadrush</div>
+                  <div class="mt-3 flex items-center gap-2 text-[13.5px] font-semibold text-brand-600">
+                    <span>Physics Teacher</span>
+                    <span class="h-1 w-1 rounded-full bg-brand-300"></span>
+                    <span>STEM Educator</span>
+                  </div>
+                  <div class="mt-2 inline-flex items-center gap-1.5 text-[12.5px] text-ink-500">
+                    <svg viewBox="0 0 24 24" class="icon-xs text-brand-600"><path d="M12 22s7-7 7-12a7 7 0 1 0-14 0c0 5 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                    Hyderabad, India
+                  </div>
+                  <p class="mt-4 max-w-[460px] text-[13.5px] text-ink-700 leading-relaxed">Passionate Physics educator dedicated to making complex concepts simple and engaging.</p>
+                </div>
+
+                <!-- Stats + buttons -->
+                <div>
+                  <div class="flex items-start justify-between gap-6">
+                    <div>
+                      <div class="text-[36px] font-bold tracking-tight text-ink-900 leading-none">456</div>
+                      <div class="mt-1 text-[13px] text-ink-500">Connections</div>
+                      <div class="mt-3 flex items-center gap-2">
+                        <div class="flex -space-x-2">
+                          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt=""/>
+                          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt=""/>
+                          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=faces" class="h-6 w-6 rounded-full ring-2 ring-white object-cover" alt=""/>
+                          <span class="grid h-6 min-w-[24px] place-items-center rounded-full bg-ink-100 px-1 text-[10px] font-semibold text-ink-600 ring-2 ring-white">+29</span>
+                        </div>
+                      </div>
+                      <div class="mt-2 text-[12px] text-ink-500">32 mutual connections</div>
+                    </div>
+                    <span class="mt-1 inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-[12px] font-semibold text-emerald-700 ring-1 ring-emerald-100">
+                      <svg viewBox="0 0 24 24" class="icon-xs"><rect x="3.5" y="7" width="17" height="12.5" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7"/></svg>
+                      Open to opportunities
+                    </span>
+                  </div>
+                  <div class="mt-5 flex items-center gap-2">
+                    <button class="inline-flex items-center gap-2 rounded-xl bg-brand-600 px-4 py-2.5 text-[13px] font-semibold text-white shadow-[0_6px_16px_-4px_rgba(59,91,254,0.45)] transition hover:bg-brand-700 hover:shadow-[0_10px_22px_-4px_rgba(59,91,254,0.55)]">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M16.5 3.5 20.5 7.5 9 19l-5 1 1-5z"/></svg>
+                      Edit Profile
+                    </button>
+                    <button class="inline-flex items-center gap-2 rounded-xl border border-ink-200 bg-white px-4 py-2.5 text-[13px] font-semibold text-ink-700 hover:bg-ink-50">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.5 10.5 7-3.5M8.5 13.5l7 3.5"/></svg>
+                      Share Profile
+                    </button>
+                    <button class="grid h-10 w-10 place-items-center rounded-xl border border-ink-200 bg-white text-ink-500 hover:bg-ink-50"><svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ========== INFO CARDS ========== -->
+          <section class="grid grid-cols-4 gap-4">
+            <div class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+              <div class="flex items-center gap-2">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-brand-50 text-brand-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M3 21V8l9-5 9 5v13"/><path d="M3 21h18M7 21V13h10v8"/></svg></div>
+                <span class="text-[13px] font-medium text-ink-500">Institution</span>
+              </div>
+              <div class="mt-4 flex items-center gap-1.5">
+                <span class="text-[15px] font-semibold text-ink-900">Greenfield Academy</span>
+                <svg viewBox="0 0 24 24" class="h-4 w-4 text-brand-600" fill="currentColor"><path d="M12 2 14 4l2.8-.6 1.1 2.6 2.6 1.1L20 9.8 22 12l-2 2.2.5 2.7-2.6 1.1-1.1 2.6L14 20l-2 2-2-2-2.7.6-1.1-2.6-2.6-1.1L4 14.2 2 12l2-2.2L3.5 7.1l2.6-1.1L7.2 3.4 10 4l2-2Z"/><path d="m8.5 12.5 2.5 2.5 4.5-5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+              </div>
+              <div class="mt-1 text-[12.5px] text-ink-500">Hyderabad, India</div>
+            </div>
+
+            <div class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+              <div class="flex items-center gap-2">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-violet-50 text-violet-600"><svg viewBox="0 0 24 24" class="icon-sm"><rect x="3.5" y="7" width="17" height="12.5" rx="2"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3.5 12.5h17"/></svg></div>
+                <span class="text-[13px] font-medium text-ink-500">Experience</span>
+              </div>
+              <div class="mt-4 text-[15px] font-semibold text-ink-900">8+ years</div>
+              <div class="mt-1 text-[12.5px] text-ink-500">Teaching Physics</div>
+            </div>
+
+            <div class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+              <div class="flex items-center gap-2">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-emerald-50 text-emerald-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M12 2 14.5 8 21 9l-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6.5-1z"/></svg></div>
+                <span class="text-[13px] font-medium text-ink-500">Expertise</span>
+              </div>
+              <div class="mt-3 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-brand-50 px-2 py-0.5 text-[11px] font-medium text-brand-600">Physics</span>
+                <span class="rounded-full bg-brand-50 px-2 py-0.5 text-[11px] font-medium text-brand-600">STEM Education</span>
+                <span class="rounded-full bg-brand-50 px-2 py-0.5 text-[11px] font-medium text-brand-600">Classroom Teaching</span>
+                <span class="rounded-full bg-brand-50 px-2 py-0.5 text-[11px] font-medium text-brand-600">Conceptual Learning</span>
+                <span class="rounded-full bg-brand-50 px-2 py-0.5 text-[11px] font-medium text-brand-600">Problem Solving</span>
+              </div>
+            </div>
+
+            <div class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+              <div class="flex items-center gap-2">
+                <div class="grid h-9 w-9 place-items-center rounded-xl bg-amber-50 text-amber-600"><svg viewBox="0 0 24 24" class="icon-sm"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v15.5H5.5A1.5 1.5 0 0 1 4 18V5.5Z"/><path d="M13 4h5.5A1.5 1.5 0 0 1 20 5.5V18a1.5 1.5 0 0 1-1.5 1.5H13V4Z"/></svg></div>
+                <span class="text-[13px] font-medium text-ink-500">Qualifications</span>
+              </div>
+              <div class="mt-4 text-[15px] font-semibold text-ink-900">M.Sc. Physics, B.Ed.</div>
+              <div class="mt-1 text-[12.5px] text-ink-500">NET Qualified</div>
+            </div>
+          </section>
+
+          <!-- ========== TABS ========== -->
+          <section class="flex items-center gap-7 border-b border-ink-200/70 px-1">
+            <button class="relative px-1 py-3 text-[14px] font-semibold text-brand-600">
+              Posts
+              <span class="absolute inset-x-0 -bottom-[1px] h-[3px] rounded-t bg-brand-600"></span>
+            </button>
+            <button class="px-1 py-3 text-[14px] font-medium text-ink-500 hover:text-ink-900">About</button>
+          </section>
+
+          <!-- ========== POST CARD ========== -->
+          <article class="rounded-2xl border border-ink-200/70 bg-white p-5 shadow-card">
+            <header class="flex items-start gap-3">
+              <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=120&h=120&fit=crop&crop=faces" class="h-11 w-11 rounded-full object-cover" alt=""/>
+              <div class="min-w-0 flex-1">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-[14.5px] font-semibold text-ink-900">Sadrush Anand</span>
+                </div>
+                <div class="mt-0.5 flex items-center gap-1.5 text-[12px] text-ink-500">
+                  <span>2 days ago</span>
+                  <span class="h-1 w-1 rounded-full bg-ink-300"></span>
+                  <svg viewBox="0 0 24 24" class="icon-xs"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 3 2.5 14 0 17M12 3.5c-2.5 3-2.5 14 0 17"/></svg>
+                  <span>Public</span>
+                </div>
+              </div>
+              <button class="grid h-8 w-8 place-items-center rounded-md text-ink-400 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="5.5" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="12" cy="18.5" r="1"/></svg>
+              </button>
+            </header>
+
+            <div class="mt-4 text-[14.5px] leading-relaxed text-ink-900">Exploring the laws of motion through real-world examples makes physics more meaningful for students. Here's a simple classroom activity that works wonders!</div>
+            <div class="mt-2 flex flex-wrap gap-1.5 text-[13px] font-semibold text-brand-600">
+              <span>#PhysicsTeaching</span>
+              <span>#STEM</span>
+              <span>#ClassroomIdeas</span>
+            </div>
+
+            <!-- Media collage: left big + 4 small in 2x2 -->
+            <div class="mt-4 grid grid-cols-3 grid-rows-2 gap-2 aspect-[16/9]">
+              <div class="col-span-1 row-span-2 overflow-hidden rounded-xl">
+                <img src="https://images.unsplash.com/photo-1635776062127-d379bfcba9f8?w=800&h=900&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&h=900&fit=crop'" class="h-full w-full object-cover" alt=""/>
+              </div>
+              <div class="overflow-hidden rounded-xl">
+                <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=500&h=400&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1509228468518-180dd4864904?w=500&h=400&fit=crop'" class="h-full w-full object-cover" alt=""/>
+              </div>
+              <div class="overflow-hidden rounded-xl">
+                <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=500&h=400&fit=crop" class="h-full w-full object-cover" alt=""/>
+              </div>
+              <div class="overflow-hidden rounded-xl">
+                <img src="https://images.unsplash.com/photo-1517089152318-42ec560349c0?w=500&h=400&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=500&h=400&fit=crop'" class="h-full w-full object-cover" alt=""/>
+              </div>
+              <div class="overflow-hidden rounded-xl">
+                <img src="https://images.unsplash.com/photo-1610466942060-bea4e58297ad?w=500&h=400&fit=crop" onerror="this.src='https://images.unsplash.com/photo-1554475901-4538ddfbccc2?w=500&h=400&fit=crop'" class="h-full w-full object-cover" alt=""/>
+              </div>
+            </div>
+
+            <!-- Post actions -->
+            <footer class="mt-4 flex items-center justify-between gap-2 border-t border-ink-100 pt-3">
+              <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M7 10.5V20H4.5A.5.5 0 0 1 4 19.5v-9A.5.5 0 0 1 4.5 10H7Zm0 0 4-6.5a2 2 0 0 1 2 2v3h5.5a1.5 1.5 0 0 1 1.5 1.7l-1 7.3a2 2 0 0 1-2 1.5H7"/></svg>
+                182
+              </button>
+              <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4 3v-3H6.5A2.5 2.5 0 0 1 4 14.5v-8Z"/></svg>
+                34
+              </button>
+              <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><path d="m17 4 3 3-3 3"/><path d="M7 7h13"/><path d="m7 20-3-3 3-3"/><path d="M17 17H4"/></svg>
+                21
+              </button>
+              <button class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg px-3 py-2 text-[13px] font-medium text-ink-600 hover:bg-ink-100">
+                <svg viewBox="0 0 24 24" class="icon"><path d="M6.5 4.5h11v15l-5.5-3.5L6.5 19.5v-15Z"/></svg>
+                Save
+              </button>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
