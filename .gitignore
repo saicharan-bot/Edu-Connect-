@@ -1,5 +1,6 @@
-# Local dev server script (Windows-only, not needed in production)
+# Local-only Windows helper scripts (not needed in production)
 serve.ps1
+deploy.ps1
 
 # OS files
 .DS_Store
